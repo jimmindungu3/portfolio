@@ -46,3 +46,10 @@
     font-size: 1.2em;
   }
   
+  .progress {
+    background-color: #343a40; /* Dark background color */
+  }
+
+  .progress-bar {
+    background-color: #353238; /* Progress bar color */
+  }
