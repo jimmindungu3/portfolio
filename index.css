@@ -41,3 +41,8 @@
     margin: 5px; /* Add some margin between images */
   }
   
+  .hero, .about, .education {
+    text-align: center;
+    font-size: 1.2em;
+  }
+  
