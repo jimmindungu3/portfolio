@@ -1,0 +1,43 @@
+/* Reset some default styles for the list and remove bullet points */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #353238;
+  }
+  
+  ul.ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Align the logo to the left */
+  .navbar a {
+    margin-right: auto;
+    color: #FFF;
+    font-weight: 700;
+  }
+
+  .navbar a:hover {
+    color: #faebd7;
+
+  }
+  
+  /* Align the links to the right */
+  .ul {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .ul li {
+    margin-left: 20px;
+  }
+
+  .socials a img {
+    width: 50px; /* Set a specific width */
+    height: auto; /* Maintain aspect ratio */
+    margin: 5px; /* Add some margin between images */
+  }
+  
