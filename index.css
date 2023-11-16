@@ -1,61 +1,99 @@
 /* Reset some default styles for the list and remove bullet points */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #353238;
-  }
-  
-  ul.ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Align the logo to the left */
-  .navbar a {
-    margin-right: auto;
-    color: #FFF;
-    font-weight: 700;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #353238;
+}
 
-  .navbar a:hover {
-    color: #faebd7;
+ul.ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
-  }
-  
-  /* Align the links to the right */
-  .ul {
-    display: flex;
-    justify-content: flex-end;
-  }
-  
-  .ul li {
-    margin-left: 20px;
-  }
+/* Align the logo to the left */
+.navbar a {
+  margin-right: auto;
+  color: #fff;
+  font-weight: 700;
+}
 
-  .socials a img {
-    width: 50px; /* Set a specific width */
-    height: auto; /* Maintain aspect ratio */
-    margin: 5px; /* Add some margin between images */
-  }
-  
-  .hero, .about, .education {
-    text-align: center;
-    font-size: 1.2em;
-  }
-  
-  .progress {
-    background-color: #343a40; /* Dark background color */
-  }
+.navbar a:hover {
+  color: #faebd7;
+}
 
-  .progress-bar {
-    background-color: #353238; /* Progress bar color */
-  }
+/* Align the links to the right */
+.ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.ul li {
+  margin-left: 20px;
+}
+
+.socials a img {
+  width: 50px; /* Set a specific width */
+  height: auto; /* Maintain aspect ratio */
+  margin: 5px; /* Add some margin between images */
+}
+
+.hero,
+.about,
+.education {
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.progress {
+  background-color: #343a40; /* Dark background color */
+}
+
+.progress-bar {
+  background-color: #353238; /* Progress bar color */
+}
 
 .fa-brands {
   color: #000000;
   font-size: 2.5rem;
   margin: 0 10px;
+}
+
+.footer {
+  background-color: #343a40;
+}
+
+.footer-icons {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.icons {
+  font-size: 1.5rem;
+}
+
+.copyright {
+  text-align: center;
+  color: #adadad;
+  font-size: 0.75rem;
+}
+
+div[my-footer] {
+  text-align: center;
+}
+
+.footer-icons {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block; /* Align the list horizontally */
+}
+
+.footer-icons li {
+  display: inline-block;
+  margin-right: 10px; /* Adjust the spacing between icons as needed */
 }
