@@ -102,3 +102,10 @@ strong {
   font-size: 0.9rem;
   font-style: italic;
 }
+
+.btn {
+  background-color: #004953;
+  border-color: #004953;
+  color: #fff;
+  border-radius: 4pc;
+}
