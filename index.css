@@ -33,6 +33,7 @@ ul.ul {
   margin-left: 20px;
 }
 
+.education,
 .hero,
 .about {
   text-align: center;
@@ -40,7 +41,6 @@ ul.ul {
   line-height: 1.8;
 }
 
-.education {
   text-align: left;
   font-size: 1.2em;
 }
@@ -54,24 +54,13 @@ ul.ul {
 }
 
 .fa-brands {
-  color: #000000;
+  color: #004953;
   font-size: 2.5rem;
   margin: 0 10px;
 }
 
 .footer {
   background-color: #343a40;
-}
-
-.footer-icons {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-}
-
-.icons {
-  font-size: 1.5rem;
 }
 
 .copyright {
@@ -89,16 +78,27 @@ div[my-footer] {
   color: #e0115f;
 }
 
-h1 {
+h1,
+h2 {
   color: #e0115f;
 }
 
 .navbar-toggler {
-  background-color: #E0115F;
-  border-color: #E0115F;
+  background-color: #e0115f;
+  border-color: #e0115f;
   color: #fff;
 }
 
 .lead {
-  color: #353238;
+  color: #004953;
+}
+
+strong {
+  color: #e0115f;
+}
+
+.skills {
+  color: #004953;
+  font-size: 0.9rem;
+  font-style: italic;
 }
