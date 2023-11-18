@@ -70,7 +70,7 @@ div[my-footer] {
 }
 
 .fa-laptop-code {
-  font-size: 1.6rem;
+  font-size: 2rem;
   color: #e0115f;
 }
 
@@ -83,6 +83,7 @@ h2 {
   background-color: #e0115f;
   border-color: #e0115f;
   color: #fff;
+  font-size: 1rem;
 }
 
 .lead {
