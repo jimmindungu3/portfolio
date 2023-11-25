@@ -122,3 +122,12 @@ strong {
   font-size: 1rem;
   color: #004953;
 }
+
+a {
+  color: #004953;
+}
+
+a:hover {
+  color: #e0115f;
+  text-decoration: none;
+}
