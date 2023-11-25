@@ -57,4 +57,4 @@ Feel free to leave a message for James. The form includes fields for your name, 
 
 ---
 
-**Note**: This README.md provides a brief overview. For a more interactive experience, explore James Ndungu's portfolio [here](#your-portfolio-url).
+**Note**: This README.md provides a brief overview. For a more interactive experience, explore James Ndungu's portfolio [here](https://jimmindungu3.github.io/portfolio/).
