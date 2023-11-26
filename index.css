@@ -46,7 +46,7 @@ ul.ul {
 }
 
 .progress {
-  background-color: #004953; /* Dark background color */
+  background-color: #004953;
 }
 
 .progress-bar {
@@ -107,7 +107,6 @@ strong {
 .skills {
   color: #004953;
   font-size: 0.9rem;
-  /* font-style: italic; */
 }
 
 .btn {

@@ -1,8 +1,8 @@
-window.addEventListener('load', function () {
-    clearForm();
+window.addEventListener("load", function () {
+  clearForm();
 });
 
 function clearForm() {
-    const form = document.getElementById("form");
-    form.reset();
+  const form = document.getElementById("form");
+  form.reset();
 }
