@@ -54,9 +54,15 @@ ul.ul {
 }
 
 .fa-brands {
-  color: #004953;
+  color: #006e7c;
   font-size: 2.5rem;
   margin: 0 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.fa-brands:hover {
+  transform: scale(1.2);
+  color: #004852;
 }
 
 .footer {
