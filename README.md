@@ -1,6 +1,6 @@
 # James Ndungu Portfolio
 
-Welcome to James Ndungu's portfolio! This project showcases James's skills and experiences as a software developer, designer, and programmer.
+Welcome to my portfolio! This project showcases my skills and experiences as a software developer, designer, and programmer.
 
 ## Table of Contents
 - [Introduction](#introduction)
@@ -13,7 +13,7 @@ Welcome to James Ndungu's portfolio! This project showcases James's skills and e
 - [Footer](#footer)
 
 ## Introduction
-This portfolio is a web-based representation of James Ndungu's professional journey. It includes information about his background, skills, education, and a contact form for reaching out.
+This portfolio is a web-based representation of my professional journey. It includes information about my background, skills, education, and a contact form for reaching out.
 
 ## Navigation
 - **Home**: Overview of my profile.
