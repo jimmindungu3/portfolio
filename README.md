@@ -1,0 +1,14 @@
+import { SiMongodb } from "react-icons/si";
+import { SiExpress } from "react-icons/si";
+import { FaReact } from "react-icons/fa";
+import { FaNodeJs } from "react-icons/fa";
+import { FaPython } from "react-icons/fa";
+import { SiDjango } from "react-icons/si";
+import { BsFiletypeSql } from "react-icons/bs";
+import { RiTailwindCssFill } from "react-icons/ri";
+import { FaGitAlt } from "react-icons/fa";
+import { VscVscode } from "react-icons/vsc";
+import { SiPostman } from "react-icons/si";
+import { FaChrome } from "react-icons/fa";
+import { FaJira } from "react-icons/fa";
+import { FaFigma } from "react-icons/fa";
