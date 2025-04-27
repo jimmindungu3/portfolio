@@ -19,7 +19,7 @@ const About = () => {
   }, []);
 
   return (
-    <section id="about" className="w-full h-screen py-16 px-4 text-white">
+    <section id="about" className="w-full min-h-screen py-16 px-4 text-white">
       <div className="max-w-5xl mx-auto">
         {/* Heading */}
         <h2

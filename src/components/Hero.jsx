@@ -101,7 +101,7 @@ const Hero = () => {
 
         {/* Right Image */}
         <div
-          className="w-full md:w-1/2 flex justify-center"
+          className="hidden md:flex w-full md:w-1/2 justify-center"
           data-aos="fade-left" // Image fade-left animation
         >
           <img
