@@ -105,7 +105,7 @@ const Hero = () => {
           data-aos="fade-left" // Image fade-left animation
         >
           <img
-            src="/public/Programming-amico.svg"
+            src="/public/programming.svg"
             alt="Developer Illustration"
             className="w-full max-w-sm md:max-w-md"
           />

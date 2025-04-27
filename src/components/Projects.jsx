@@ -117,7 +117,7 @@ const Projects = () => {
   }, []);
 
   return (
-    <section id="projects" className="w-full px-4 mt-28 md:mt-0 text-white min-h-screen">
+    <section id="projects" className="w-full px-4 mt-48 md:mt-0 text-white md:min-h-screen">
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
         <h2
