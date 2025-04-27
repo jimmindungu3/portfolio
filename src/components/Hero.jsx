@@ -31,10 +31,15 @@ const Hero = () => {
             data-aos="fade-left"
           >
             James Ndung'u <br />
-            <span className="text-purple-400">Full Stack Developer</span>
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
+              Full Stack Developer
+            </span>
             <br />
-            <span className="text-purple-400">TVET Trainer</span>
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
+              TVET Trainer
+            </span>
           </h1>
+
           <p className="mt-4 text-gray-300" data-aos="fade-left">
             Building innovative, robust, and user-friendly digital solutions
             that bring ideas to life and drive business growth.
@@ -105,7 +110,7 @@ const Hero = () => {
           data-aos="fade-left" // Image fade-left animation
         >
           <img
-            src="/public/programming.svg"
+            src="/programming.svg"
             alt="Developer Illustration"
             className="w-full max-w-sm md:max-w-md"
           />
