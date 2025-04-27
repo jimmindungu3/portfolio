@@ -35,7 +35,7 @@ const LetsConnect = () => {
   ];
 
   return (
-    <section id="socials" className="w-full py-16 px-4 text-white ">
+    <section id="socials" className="w-full py-16 px-4 mb-16 text-white ">
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
