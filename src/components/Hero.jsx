@@ -44,7 +44,7 @@ const Hero = () => {
             <img
               src="/james.png"
               alt="James photo"
-              className="w-3/4 max-w-xs rounded-full border border-white"
+              className="w-3/4 max-w-xs rounded-full border border-gray-700"
             />
           </div>
 
