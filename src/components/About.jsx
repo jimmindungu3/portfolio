@@ -2,20 +2,22 @@ import React, { useEffect } from "react";
 import {
   FaCode,
   FaCertificate,
-  FaGlobeAmericas,
+  FaGraduationCap,
   FaArrowRight,
   FaFileAlt,
 } from "react-icons/fa";
 import { BiSolidTimeFive } from "react-icons/bi";
+import { MdOutlineWorkHistory } from "react-icons/md";
 import AOS from "aos";
-import "aos/dist/aos.css"; // import AOS CSS
+import "aos/dist/aos.css";
 
 const About = () => {
   useEffect(() => {
+    // Initialize AOS animation library
     AOS.init({
-      duration: 1000, // animation duration
-      easing: "ease-in-out", // easing function
-      once: true, // run the animation only once
+      duration: 1000,
+      easing: "ease-in-out",
+      once: true,
     });
   }, []);
 
@@ -30,29 +32,149 @@ const About = () => {
           About Me
         </h2>
 
-        {/* Bio text */}
+        {/* Professional Journey */}
         <div
           className="text-center mb-10"
           data-aos="fade-up"
           data-aos-delay="200"
         >
-          <p className="text-lg md:text-xl">
-            Hello, I'm <span className="font-semibold">James Ndung'u</span> — a
-            passionate full-stack developer based in Nairobi, Kenya. I
-            specialize in{" "}
-            <span className="text-[#61DAFB] font-semibold">React</span>,
-            <span className="text-[#68A063] font-semibold"> Node.js</span>, and{" "}
-            <span className="text-[#47A248] font-semibold">MongoDB</span>. I'm
-            constantly improving my skills in building web applications.
-            Currently, I am working as a TVET trainer and on several personal
-            projects in e-commerce and education spaces. My goal is to continue
-            pushing boundaries in tech.
+          <p className="text-lg md:text-xl mb-6">
+            My journey in tech began with a passion for solving problems through
+            code. With 3+ years of hands-on experience, I've evolved from
+            building simple websites to developing complex full-stack
+            applications that deliver real-world value.
           </p>
+
+          <p className="text-lg md:text-xl">
+            As a TVET trainer, I'm committed to empowering the next generation
+            of developers by sharing my knowledge and experience. I believe in
+            the power of education to transform lives and communities, which is
+            why I balance my development work with teaching.
+          </p>
+        </div>
+
+        {/* Skills Section */}
+        <div className="mb-12">
+          <h3
+            className="text-2xl font-bold mb-6 text-center"
+            data-aos="fade-up"
+          >
+            My Approach
+          </h3>
+
+          <div
+            className="grid grid-cols-1 md:grid-cols-2 gap-6"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            {/* Development Philosophy */}
+            <div className="bg-gray-900/60 backdrop-blur p-6 rounded-lg border border-gray-800">
+              <h4 className="text-xl font-semibold mb-3 text-purple-400">
+                Development Philosophy
+              </h4>
+              <p className="text-gray-300">
+                I believe in writing clean, maintainable code and creating
+                intuitive user experiences. My approach combines technical
+                excellence with an understanding of user needs to build
+                solutions that stand the test of time.
+              </p>
+            </div>
+
+            {/* Teaching Approach */}
+            <div className="bg-gray-900/60 backdrop-blur p-6 rounded-lg border border-gray-800">
+              <h4 className="text-xl font-semibold mb-3 text-blue-400">
+                Teaching Approach
+              </h4>
+              <p className="text-gray-300">
+                As an educator, I focus on practical, hands-on learning that
+                prepares students for real-world challenges. I break down
+                complex concepts into digestible modules while emphasizing
+                industry best practices.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Stats and achievements */}
+        <h3 className="text-2xl font-bold mb-6 text-center" data-aos="fade-up">
+          Career Highlights
+        </h3>
+
+        <div
+          className="grid grid-cols-1 md:grid-cols-3 gap-6"
+          data-aos="fade-up"
+          data-aos-delay="600"
+        >
+          {/* Projects card */}
+          <div
+            className="bg-gray-900/80 backdrop-blur rounded-lg p-6 border border-gray-800 hover:border-indigo-900/50 transition group"
+            data-aos="fade-up"
+          >
+            <div className="flex justify-between items-start mb-6">
+              <div className="bg-gray-800 p-3 rounded-full">
+                <FaCode className="text-indigo-400 text-xl" />
+              </div>
+              <span className="text-4xl font-bold text-white">4+</span>
+            </div>
+            <h3 className="text-lg font-semibold uppercase tracking-wider text-gray-300 mb-1">
+              Key Projects
+            </h3>
+            <div className="flex items-center justify-between">
+              <p className="text-sm text-gray-400">
+                From e-commerce to educational platforms
+              </p>
+              <FaArrowRight className="text-gray-600 group-hover:text-indigo-400 transition" />
+            </div>
+          </div>
+
+          {/* Education card */}
+          <div
+            className="bg-gray-900/80 backdrop-blur rounded-lg p-6 border border-gray-800 hover:border-indigo-900/50 transition group"
+            data-aos="fade-up"
+          >
+            <div className="flex justify-between items-start mb-6">
+              <div className="bg-gray-800 p-3 rounded-full">
+                <FaGraduationCap className="text-purple-400 text-xl" />
+              </div>
+              <span className="text-4xl font-bold text-white">3+</span>
+            </div>
+            <h3 className="text-lg font-semibold uppercase tracking-wider text-gray-300 mb-1">
+              Certificates
+            </h3>
+            <div className="flex items-center justify-between">
+              <p className="text-sm text-gray-400">
+                Software engineering & TVET training
+              </p>
+              <FaArrowRight className="text-gray-600 group-hover:text-purple-400 transition" />
+            </div>
+          </div>
+
+          {/* Work Experience card */}
+          <div
+            className="bg-gray-900/80 backdrop-blur rounded-lg p-6 border border-gray-800 hover:border-indigo-900/50 transition group"
+            data-aos="fade-up"
+          >
+            <div className="flex justify-between items-start mb-6">
+              <div className="bg-gray-800 p-3 rounded-full">
+                <MdOutlineWorkHistory className="text-blue-400 text-xl" />
+              </div>
+              <span className="text-4xl font-bold text-white">3+</span>
+            </div>
+            <h3 className="text-lg font-semibold uppercase tracking-wider text-gray-300 mb-1">
+              Years of experience
+            </h3>
+            <div className="flex items-center justify-between">
+              <p className="text-sm text-gray-400">
+                Balancing development & teaching
+              </p>
+              <FaArrowRight className="text-gray-600 group-hover:text-blue-400 transition" />
+            </div>
+          </div>
         </div>
 
         {/* Action buttons */}
         <div
-          className="flex flex-wrap justify-center gap-4 mb-16"
+          className="flex flex-wrap justify-center gap-4 mt-12"
           data-aos="fade-up"
           data-aos-delay="400"
         >
@@ -75,79 +197,6 @@ const About = () => {
             <FaCode />
             <span>View Projects</span>
           </a>
-        </div>
-
-        {/* Stats cards */}
-        <div
-          className="grid grid-cols-1 md:grid-cols-3 gap-6"
-          data-aos="fade-up"
-          data-aos-delay="600"
-        >
-          {/* Projects card */}
-          <div
-            className="bg-gray-900/80 backdrop-blur rounded-lg p-6 border border-gray-800 hover:border-indigo-900/50 transition group"
-            data-aos="fade-up"
-          >
-            <div className="flex justify-between items-start mb-6">
-              <div className="bg-gray-800 p-3 rounded-full">
-                <FaCode className="text-indigo-400 text-xl" />
-              </div>
-              <span className="text-4xl font-bold text-white">4</span>
-            </div>
-            <h3 className="text-lg font-semibold uppercase tracking-wider text-gray-300 mb-1">
-              Total Projects
-            </h3>
-            <div className="flex items-center justify-between">
-              <p className="text-sm text-gray-400">
-                E-commerce, booking app and more.
-              </p>
-              <FaArrowRight className="text-gray-600 group-hover:text-indigo-400 transition" />
-            </div>
-          </div>
-
-          {/* Certificates card */}
-          <div
-            className="bg-gray-900/80 backdrop-blur rounded-lg p-6 border border-gray-800 hover:border-indigo-900/50 transition group"
-            data-aos="fade-up"
-          >
-            <div className="flex justify-between items-start mb-6">
-              <div className="bg-gray-800 p-3 rounded-full">
-                <FaCertificate className="text-purple-400 text-xl" />
-              </div>
-              <span className="text-4xl font-bold text-white">3</span>
-            </div>
-            <h3 className="text-lg font-semibold uppercase tracking-wider text-gray-300 mb-1">
-              Certificates
-            </h3>
-            <div className="flex items-center justify-between">
-              <p className="text-sm text-gray-400">
-                Software engineering certification | TVET training award.
-              </p>
-              <FaArrowRight className="text-gray-600 group-hover:text-purple-400 transition" />
-            </div>
-          </div>
-
-          {/* Experience card */}
-          <div
-            className="bg-gray-900/80 backdrop-blur rounded-lg p-6 border border-gray-800 hover:border-indigo-900/50 transition group"
-            data-aos="fade-up"
-          >
-            <div className="flex justify-between items-start mb-6">
-              <div className="bg-gray-800 p-3 rounded-full">
-                <BiSolidTimeFive className="text-blue-400 text-xl" />
-              </div>
-              <span className="text-4xl font-bold text-white">3</span>
-            </div>
-            <h3 className="text-lg font-semibold uppercase tracking-wider text-gray-300 mb-1">
-              Years of Experience
-            </h3>
-            <div className="flex items-center justify-between">
-              <p className="text-sm text-gray-400">
-                Extensive learning and practical experience.
-              </p>
-              <FaArrowRight className="text-gray-600 group-hover:text-blue-400 transition" />
-            </div>
-          </div>
         </div>
       </div>
     </section>

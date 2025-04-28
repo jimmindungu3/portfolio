@@ -24,16 +24,16 @@ const Hero = () => {
           data-aos="fade-up"
         >
           {/* Let's Build Button */}
-          <button className="mb-4 px-4 py-2 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-sm font-semibold">
-            🚀 Let's Build the Future
-          </button>
+          <p className="mb-4 text-2xl">
+          👋 🌍
+          </p>
 
           {/* Name */}
           <h1
             className="text-3xl md:text-5xl font-bold text-white leading-tight mb-4"
             data-aos="fade-left"
           >
-            James Ndung'u
+            I'm James Ndung'u
           </h1>
 
           {/* Image - Small Screens */}
@@ -54,7 +54,7 @@ const Hero = () => {
               className="text-2xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600 mb-2"
               data-aos="fade-left"
             >
-              Full Stack Developer
+              Full Stack Web Developer &
             </h2>
             <h2
               className="text-2xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600"
@@ -66,8 +66,8 @@ const Hero = () => {
 
           {/* Description */}
           <p className="text-gray-300 mb-6" data-aos="fade-left">
-            Building innovative, robust, and user-friendly digital solutions
-            that drive business growth.
+            I build innovative, robust, and user-friendly digital solutions that
+            drive business growth.
           </p>
 
           {/* Tech Stack */}
@@ -96,7 +96,7 @@ const Hero = () => {
             </a>
             <a
               href="#contact"
-              className="px-6 py-2 rounded-lg bg-black/40 backdrop-blur text-white border border-white/10 hover:bg-white/10 transition"
+              className="px-6 py-2 rounded-md bg-gradient-to-r from-purple-500 to-pink-500 text-sm md:text-base content-center text-white"
               data-aos="fade-up"
             >
               Contact ✉
