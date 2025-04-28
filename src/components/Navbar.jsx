@@ -1,15 +1,15 @@
 import React from "react";
-import { FaHome, FaRegUser, FaEnvelope, FaPlug, FaCode } from "react-icons/fa";
+import { FaEnvelope, FaPlug, FaCode } from "react-icons/fa";
 import { FaUserTie } from "react-icons/fa";
-import { RiUserFill } from "react-icons/ri";
 import { IoMdHome } from "react-icons/io";
+import { MdMiscellaneousServices } from "react-icons/md"; // Service icon
 
 const Navbar = () => {
   return (
     <header className="fixed top-0 left-0 w-full text-white z-50">
       <div className="container mx-auto max-w-6xl p-4 flex justify-end items-center relative">
         {/* Navigation Icons */}
-        <div className="flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-8 bg-gray-900 bg-opacity-50 pb-4 px-4 pt-2">
+        <div className="flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-8 bg-gray-900 bg-opacity-50 pb-4 px-4 pt-2 rounde-md">
           <a
             href="#home"
             className="bg-gray-700 p-2 rounded-full hover:bg-blue-500 transition-all duration-300 flex items-center justify-center"
@@ -21,6 +21,12 @@ const Navbar = () => {
             className="bg-gray-700 p-2 rounded-full hover:bg-blue-500 transition-all duration-300 flex items-center justify-center"
           >
             <FaUserTie className="text-lg md:text-xl" />
+          </a>
+          <a
+            href="#services"
+            className="bg-gray-700 p-2 rounded-full hover:bg-blue-500 transition-all duration-300 flex items-center justify-center"
+          >
+            <MdMiscellaneousServices className="text-xl md:text-2xl" />
           </a>
           <a
             href="#projects"

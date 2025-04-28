@@ -129,7 +129,7 @@ const Hero = () => {
           <img
             src="/james.png"
             alt="Developer Illustration"
-            className="w-full max-w-md rounded-full border border-white"
+            className="w-full max-w-md rounded-full border border-gray-700"
           />
         </div>
       </div>

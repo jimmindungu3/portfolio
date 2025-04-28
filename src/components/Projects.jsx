@@ -127,7 +127,7 @@ const Projects = () => {
           className="text-4xl md:text-5xl font-bold text-center mb-4 lg:pt-12 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600"
           data-aos="fade-up"
         >
-          Portfolio Showcase
+          Portfolio
         </h2>
 
         {/* Subtitle */}
