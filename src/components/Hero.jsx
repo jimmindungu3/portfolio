@@ -1,14 +1,14 @@
 import React, { useEffect } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import AOS from "aos";
-import "aos/dist/aos.css"; // Import AOS styles
+import "aos/dist/aos.css";
 
 const Hero = () => {
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Animation duration
-      easing: "ease-in-out", // Easing function
-      once: true, // Animation only triggers once
+      duration: 1000,
+      easing: "ease-in-out",
+      once: true,
     });
   }, []);
 
@@ -17,42 +17,50 @@ const Hero = () => {
       id="home"
       className="w-full min-h-screen flex items-center justify-center py-16 px-4 md:py-24 lg:py-32"
     >
-      <div className="container mx-auto max-w-6xl px-4 flex flex-col md:flex-row items-center justify-center md:justify-between gap-8">
+      <div className="container mx-auto max-w-6xl px-4 flex flex-col lg:flex-row items-center justify-between gap-8">
         {/* Left Content */}
         <div
-          className="flex flex-col items-center md:items-start max-w-xl text-center md:text-left"
-          data-aos="fade-up" // Animation for left content
+          className="flex flex-col items-center lg:items-start text-center lg:text-left max-w-2xl"
+          data-aos="fade-up"
         >
           <button className="mb-4 px-4 py-2 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-sm font-semibold">
             🚀 Ready to Innovate
           </button>
+
           <h1
-            className="text-3xl md:text-5xl font-bold leading-tight text-white"
+            className="text-3xl md:text-5xl font-bold text-white leading-tight mb-4"
             data-aos="fade-left"
           >
-            James Ndung'u <br />
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
-              Full Stack Developer
-            </span>
-            <br />
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
-              TVET Trainer
-            </span>
+            James Ndung'u
           </h1>
 
-          <p className="mt-4 text-gray-300" data-aos="fade-left">
+          <h2
+            className="text-2xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600 mb-2"
+            data-aos="fade-left"
+          >
+            Full Stack Developer
+          </h2>
+
+          <h2
+            className="text-2xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600 mb-4"
+            data-aos="fade-left"
+          >
+            TVET Trainer
+          </h2>
+
+          <p className="text-gray-300 mb-6" data-aos="fade-left">
             Building innovative, robust, and user-friendly digital solutions
-            that bring ideas to life and drive business growth.
+            that drive business growth.
           </p>
 
-          {/* Tech Tags */}
-          <div className="mt-6 flex flex-wrap gap-3 justify-center md:justify-start">
+          {/* Tech Stack */}
+          <div className="flex flex-wrap gap-3 justify-center lg:justify-start mb-6">
             {["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"].map(
               (tech, index) => (
                 <span
                   key={index}
                   className="px-4 py-1 rounded-full bg-gray-800 text-gray-300 text-sm"
-                  data-aos="zoom-in" // Tech tags zoom-in animation
+                  data-aos="zoom-in"
                 >
                   {tech}
                 </span>
@@ -61,28 +69,29 @@ const Hero = () => {
           </div>
 
           {/* Buttons */}
-          <div className="mt-6 flex gap-4 justify-center md:justify-start">
+          <div className="flex gap-4 justify-center lg:justify-start mb-6">
             <a
               href="#projects"
               className="px-6 py-2 rounded-lg bg-black/40 backdrop-blur text-white border border-white/10 hover:bg-white/10 transition"
-              data-aos="fade-up" // Buttons fade-up animation
+              data-aos="fade-up"
             >
               Projects ↗
             </a>
             <a
               href="#contact"
               className="px-6 py-2 rounded-lg bg-black/40 backdrop-blur text-white border border-white/10 hover:bg-white/10 transition"
-              data-aos="fade-up" // Buttons fade-up animation
+              data-aos="fade-up"
             >
               Contact ✉
             </a>
           </div>
 
-          {/* Socials */}
-          <div className="mt-6 flex gap-6 justify-center md:justify-start text-white">
+          {/* Social Links */}
+          <div className="flex gap-6 justify-center lg:justify-start text-white">
             <a
               href="https://github.com/jimmindungu3"
               target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-purple-400 transition"
               data-aos="fade-right"
             >
@@ -91,23 +100,36 @@ const Hero = () => {
             <a
               href="https://www.linkedin.com/in/jamesndunguthedev"
               target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-purple-400 transition"
               data-aos="fade-right"
             >
               <FaLinkedin size={24} />
             </a>
           </div>
+
+          {/* Image for small/medium screens */}
+          <div
+            className="flex lg:hidden w-full justify-center mt-8"
+            data-aos="fade-up"
+          >
+            <img
+              src="/james.png"
+              alt="James photo"
+              className="w-full max-w-xs rounded-full border border-white"
+            />
+          </div>
         </div>
 
-        {/* Right Image */}
+        {/* Image for large screens */}
         <div
-          className="hidden md:flex w-full md:w-1/2 justify-center"
-          data-aos="fade-left" // Image fade-left animation
+          className="hidden lg:flex w-full lg:w-1/2 justify-center"
+          data-aos="fade-left"
         >
           <img
-            src="/programming.svg"
+            src="/james.png"
             alt="Developer Illustration"
-            className="w-full max-w-sm md:max-w-md"
+            className="w-full max-w-md rounded-full border border-white"
           />
         </div>
       </div>

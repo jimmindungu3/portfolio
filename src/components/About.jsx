@@ -59,11 +59,12 @@ const About = () => {
           <button className="flex items-center gap-2 bg-indigo-600/80 hover:bg-indigo-700 transition px-6 py-3 rounded-lg">
             <a
               href="/James Resume.pdf"
-              download
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-2"
             >
               <FaFileAlt />
-              <span>Download Resume</span>
+              <span>View Resume</span>
             </a>
           </button>
 

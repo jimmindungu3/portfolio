@@ -20,99 +20,99 @@ const Services = () => {
     development: [
       {
         id: 1,
-        title: "MERN Stack Development",
+        title: "Website Development",
         icon: (
           <FaLaptopCode className="text-4xl text-blue-400 group-hover:text-blue-300 transition-colors" />
         ),
         description:
-          "Full-stack applications built with MongoDB, Express.js, React, and Node.js, offering scalable and efficient web solutions.",
+          "Professional websites built with modern technologies like React, Next.js, and responsive design principles to ensure your site works flawlessly across all devices.",
       },
       {
         id: 2,
-        title: "Django Backend Development",
+        title: "E-commerce Solutions",
         icon: (
           <FaCode className="text-4xl text-purple-400 group-hover:text-purple-300 transition-colors" />
         ),
         description:
-          "Robust backend systems with Django, ensuring secure APIs, efficient database management, and scalable architectures.",
+          "Custom online stores with secure payment processing, inventory management, and user-friendly interfaces to help your business thrive in the digital marketplace.",
       },
       {
         id: 3,
-        title: "Responsive Frontend Design",
+        title: "UI/UX Design",
         icon: (
           <FaLaptopCode className="text-4xl text-pink-400 group-hover:text-pink-300 transition-colors" />
         ),
         description:
-          "Modern, mobile-first UI designs using React and Tailwind CSS to deliver clean and responsive user experiences.",
+          "Intuitive and engaging user experiences with beautiful interfaces that enhance customer satisfaction and conversion rates for your digital products.",
       },
     ],
     integration: [
       {
         id: 1,
-        title: "API Development & Integration",
+        title: "API Integration",
         icon: (
           <FaServer className="text-4xl text-green-400 group-hover:text-green-300 transition-colors" />
         ),
         description:
-          "Custom APIs and seamless third-party integrations for payments, authentication, and data services.",
+          "Seamless connection of your website with third-party services, payment gateways, and data sources through custom API integrations.",
       },
       {
         id: 2,
-        title: "Database Design",
+        title: "Database Solutions",
         icon: (
           <FaServer className="text-4xl text-yellow-400 group-hover:text-yellow-300 transition-colors" />
         ),
         description:
-          "Optimized database schemas and queries with MongoDB and SQL for efficient data management and retrieval.",
+          "Robust database design and implementation using SQL and NoSQL solutions to securely store and efficiently retrieve your application data.",
       },
       {
         id: 3,
-        title: "Authentication & Security",
+        title: "Authentication Systems",
         icon: (
           <FaServer className="text-4xl text-teal-400 group-hover:text-teal-300 transition-colors" />
         ),
         description:
-          "Secure login systems using JWT, OAuth, and best practices to protect user data and enhance app security.",
+          "Secure user authentication and authorization systems with JWT, OAuth, and other modern security protocols to protect your users and data.",
       },
     ],
     training: [
       {
         id: 1,
-        title: "Fullstack Web Training",
+        title: "Web Development Training",
         icon: (
           <FaChalkboardTeacher className="text-4xl text-orange-400 group-hover:text-orange-300 transition-colors" />
         ),
         description:
-          "Training sessions on modern web development stacks, focusing on React, Node.js, MongoDB, and RESTful APIs.",
+          "Hands-on training programs for individuals and teams looking to master modern web development technologies and best practices.",
       },
       {
         id: 2,
-        title: "Coding Mentorship",
+        title: "Code Mentorship",
         icon: (
           <FaChalkboardTeacher className="text-4xl text-indigo-400 group-hover:text-indigo-300 transition-colors" />
         ),
         description:
-          "One-on-one mentorship to help junior developers build strong foundational skills and real-world project experience.",
+          "One-on-one mentoring sessions to help you overcome coding challenges, improve your skills, and grow as a developer.",
       },
       {
         id: 3,
-        title: "Career Coaching",
+        title: "Technical Workshops",
         icon: (
           <FaChalkboardTeacher className="text-4xl text-red-400 group-hover:text-red-300 transition-colors" />
         ),
         description:
-          "Guidance on portfolio building, interview preparation, and soft skills necessary for tech career success.",
+          "Specialized group sessions focused on specific technologies or development concepts to accelerate learning in a collaborative environment.",
       },
     ],
     consultation: [
       {
         id: 1,
-        title: "Technical Consultation",
+        title: "Web Consultation",
         icon: (
           <FaLightbulb className="text-4xl text-amber-400 group-hover:text-amber-300 transition-colors" />
         ),
         description:
-          "Advice on technology stack selection, system architecture, and project planning for startups and businesses.",
+          "Strategic guidance on web technologies, architecture decisions, and digital transformation to help your business succeed online.",
       },
       {
         id: 2,
@@ -121,16 +121,16 @@ const Services = () => {
           <FaLightbulb className="text-4xl text-emerald-400 group-hover:text-emerald-300 transition-colors" />
         ),
         description:
-          "Optimizing website speed, database performance, and API efficiency to deliver faster and more reliable apps.",
+          "Analysis and improvement of your existing web applications to enhance speed, reliability, and user experience.",
       },
       {
         id: 3,
-        title: "Security Best Practices",
+        title: "Technical Assessment",
         icon: (
           <FaLightbulb className="text-4xl text-blue-400 group-hover:text-blue-300 transition-colors" />
         ),
         description:
-          "Evaluating and enhancing application security with best practices in authentication, data protection, and server configuration.",
+          "Comprehensive evaluation of your current digital infrastructure with actionable recommendations for improvement and growth.",
       },
     ],
   };
@@ -150,7 +150,7 @@ const Services = () => {
     // Reset AOS animations and force re-render of service items
     setTimeout(() => {
       AOS.refresh();
-      setRefreshKey((prevKey) => prevKey + 1);
+      setRefreshKey(prevKey => prevKey + 1);
     }, 50);
   };
 
@@ -210,7 +210,7 @@ const Services = () => {
         </div>
 
         {/* Services Grid */}
-        <div
+        <div 
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           key={refreshKey} // Force re-render when tab changes
         >
@@ -230,7 +230,9 @@ const Services = () => {
 
               {/* Service content */}
               <div className="text-center">
-                <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
+                <h3 className="text-xl font-semibold mb-3">
+                  {service.title}
+                </h3>
                 <p className="text-gray-300 text-sm">{service.description}</p>
               </div>
             </div>
