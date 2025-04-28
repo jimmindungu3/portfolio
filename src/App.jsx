@@ -8,6 +8,7 @@ import Contact from "./components/Contact";
 import LetsConnect from "./components/LetsConnect";
 import MySkills from "./components/MySkills";
 import Footer from "./components/Footer";
+import Services from "./components/Services";
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
         <Navbar />
         <Hero />
         <About />
+        <Services />
         <Projects />
         <MySkills />
         <LetsConnect />

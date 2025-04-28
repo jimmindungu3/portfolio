@@ -26,30 +26,31 @@ const Contact = () => {
 
     try {
       // Using the Formspree URL you provided
-      const response = await fetch('https://formspree.io/f/mkgrgkvz', {
-        method: 'POST',
+      const response = await fetch("https://formspree.io/f/mkgrgkvz", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
       });
 
       if (!response.ok) {
-        throw new Error('Failed to submit form. Please try again.');
+        throw new Error("Failed to submit form. Please try again.");
       }
 
       // Form submitted successfully
       setIsSubmitted(true);
-      
+
       // Reset form after showing success message
       setTimeout(() => {
         setIsSubmitted(false);
         setFormData({ name: "", email: "", message: "" });
       }, 3000);
-      
     } catch (error) {
-      console.error('Form submission error:', error);
-      setErrorMessage(error.message || 'Something went wrong. Please try again.');
+      console.error("Form submission error:", error);
+      setErrorMessage(
+        error.message || "Something went wrong. Please try again."
+      );
     } finally {
       setIsSubmitting(false);
     }
@@ -125,7 +126,7 @@ const Contact = () => {
                     {errorMessage}
                   </div>
                 )}
-                
+
                 <div>
                   <label
                     htmlFor="name"

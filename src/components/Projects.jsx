@@ -137,8 +137,8 @@ const Projects = () => {
           data-aos-delay="200"
         >
           Explore my journey through projects, certificates, and technical
-          expertise. Each one represents a milestone in my continuous
-          learning and career paths.
+          expertise. Each one represents a milestone in my continuous learning
+          and career paths.
         </p>
 
         {/* Tabs */}
