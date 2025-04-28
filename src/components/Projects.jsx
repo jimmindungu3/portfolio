@@ -5,7 +5,7 @@ import {
   FaExternalLinkAlt,
   FaArrowRight,
   FaGithub,
-  FaTimes
+  FaTimes,
 } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css"; // import AOS CSS
@@ -62,21 +62,21 @@ const Projects = () => {
   const certificatesData = [
     {
       id: 1,
-      title: "Software Engineering - Moringa School",
+      title: "Software Engineering Certification - Moringa School",
       image: "/moringa-certificate.jpg",
-      bgColor: "from-purple-700/40 to-purple-900/30",
+      bgColor: "from-blue-800/40 to-blue-600/30", // Deep Blue
     },
     {
       id: 2,
-      title: "Certificate of Merit - Thika TTI",
+      title: "Certificate of Merit - Thika Technical Training Institute",
       image: "/thika-tti-merit.jpeg",
-      bgColor: "from-indigo-700/40 to-indigo-900/30",
+      bgColor: "from-purple-800/40 to-purple-600/30", // Royal Purple
     },
     {
       id: 3,
-      title: "Recognition - Kenya National Bureau of Statistics",
+      title: "Certificate of Recognition - Kenya National Bureau of Statistics",
       image: "/knbs-certificate.jpg",
-      bgColor: "from-fuchsia-700/40 to-fuchsia-900/30",
+      bgColor: "from-green-800/40 to-green-600/30", // Emerald Green
     },
   ];
 
@@ -117,11 +117,14 @@ const Projects = () => {
   }, []);
 
   return (
-    <section id="projects" className="w-full px-4 mt-48 md:mt-0 text-white md:min-h-screen">
+    <section
+      id="projects"
+      className="w-full px-4 mt-48 text-white md:min-h-screen"
+    >
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
         <h2
-          className="text-4xl md:text-5xl font-bold text-center mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600"
+          className="text-4xl md:text-5xl font-bold text-center mb-4 lg:pt-12 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600"
           data-aos="fade-up"
         >
           Portfolio Showcase
@@ -133,9 +136,9 @@ const Projects = () => {
           data-aos="fade-up"
           data-aos-delay="200"
         >
-          Explore my journey through projects, certifications, and technical
-          expertise. Each section represents a milestone in my continuous
-          learning path.
+          Explore my journey through projects, certificates, and technical
+          expertise. Each one represents a milestone in my continuous
+          learning and career paths.
         </p>
 
         {/* Tabs */}
@@ -236,7 +239,7 @@ const Projects = () => {
                 data-aos="fade-up"
                 data-aos-delay={certificate.id * 100}
               >
-                <div 
+                <div
                   className={`relative h-64 overflow-hidden bg-gradient-to-br ${certificate.bgColor} cursor-pointer`}
                   onClick={() => openPreview(certificate.image)}
                 >
@@ -253,9 +256,7 @@ const Projects = () => {
                   </div>
                 </div>
                 <div className="p-4 text-center">
-                  <h3 className="text-lg font-semibold">
-                    {certificate.title}
-                  </h3>
+                  <h3 className="text-lg font-semibold">{certificate.title}</h3>
                 </div>
               </div>
             ))}
@@ -264,22 +265,22 @@ const Projects = () => {
 
         {/* Image Preview Modal */}
         {previewImage && (
-          <div 
+          <div
             className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80"
             onClick={closePreview}
           >
             <div className="relative max-w-4xl max-h-[90vh] w-full mx-4">
               {/* Close button */}
-              <button 
+              <button
                 className="absolute top-2 right-2 text-white bg-gray-900 rounded-full p-2 hover:bg-gray-700 transition"
                 onClick={closePreview}
               >
                 <FaTimes size={18} />
               </button>
-              
+
               {/* Image */}
-              <div 
-                className="relative" 
+              <div
+                className="relative"
                 onClick={(e) => e.stopPropagation()} // Prevent closing when clicking on the image container
               >
                 <img

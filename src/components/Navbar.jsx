@@ -1,27 +1,44 @@
 import React from "react";
-import { FaHome, FaUserAlt, FaSuitcase, FaEnvelope } from "react-icons/fa";
-import { MdOutlineSocialDistance } from "react-icons/md";
+import { FaHome, FaRegUser, FaEnvelope, FaPlug, FaCode } from "react-icons/fa";
+import { FaUserTie } from "react-icons/fa";
+import { RiUserFill } from "react-icons/ri";
+import { IoMdHome } from "react-icons/io";
 
 const Navbar = () => {
   return (
     <header className="fixed top-0 left-0 w-full text-white z-50">
       <div className="container mx-auto max-w-6xl p-4 flex justify-end items-center relative">
         {/* Navigation Icons */}
-        <div className="flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-6">
-          <a href="#home" className="text-white hover:text-blue-400 transition-all duration-300">
-            <FaHome className="text-2xl md:text-3xl" />
+        <div className="flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-8 bg-gray-900 bg-opacity-50 pb-4 px-4 pt-2">
+          <a
+            href="#home"
+            className="bg-gray-700 p-2 rounded-full hover:bg-blue-500 transition-all duration-300 flex items-center justify-center"
+          >
+            <IoMdHome className="text-xl md:text-2xl" />
           </a>
-          <a href="#about" className="text-white hover:text-blue-400 transition-all duration-300">
-            <FaUserAlt className="text-2xl md:text-3xl" />
+          <a
+            href="#about"
+            className="bg-gray-700 p-2 rounded-full hover:bg-blue-500 transition-all duration-300 flex items-center justify-center"
+          >
+            <FaUserTie className="text-lg md:text-xl" />
           </a>
-          <a href="#projects" className="text-white hover:text-blue-400 transition-all duration-300">
-            <FaSuitcase className="text-2xl md:text-3xl" />
+          <a
+            href="#projects"
+            className="bg-gray-700 p-2 rounded-full hover:bg-blue-500 transition-all duration-300 flex items-center justify-center"
+          >
+            <FaCode className="text-xl md:text-2xl" />
           </a>
-          <a href="#socials" className="text-white hover:text-blue-400 transition-all duration-300">
-            <MdOutlineSocialDistance className="text-2xl md:text-3xl" />
+          <a
+            href="#socials"
+            className="bg-gray-700 p-2 rounded-full hover:bg-blue-500 transition-all duration-300 flex items-center justify-center"
+          >
+            <FaPlug className="text-xl md:text-xl" />
           </a>
-          <a href="#contact" className="text-white hover:text-blue-400 transition-all duration-300">
-            <FaEnvelope className="text-2xl md:text-3xl" />
+          <a
+            href="#contact"
+            className="bg-gray-700 p-2 rounded-full hover:bg-blue-500 transition-all duration-300 flex items-center justify-center"
+          >
+            <FaEnvelope className="text-xl md:text-xl" />
           </a>
         </div>
       </div>

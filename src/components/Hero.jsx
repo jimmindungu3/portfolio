@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS styles
 
@@ -81,25 +81,20 @@ const Hero = () => {
           {/* Socials */}
           <div className="mt-6 flex gap-6 justify-center md:justify-start text-white">
             <a
-              href="#"
+              href="https://github.com/jimmindungu3"
+              target="_blank"
               className="hover:text-purple-400 transition"
               data-aos="fade-right"
             >
               <FaGithub size={24} />
             </a>
             <a
-              href="#"
+              href="https://www.linkedin.com/in/jamesndunguthedev"
+              target="_blank"
               className="hover:text-purple-400 transition"
               data-aos="fade-right"
             >
               <FaLinkedin size={24} />
-            </a>
-            <a
-              href="#"
-              className="hover:text-purple-400 transition"
-              data-aos="fade-right"
-            >
-              <FaInstagram size={24} />
             </a>
           </div>
         </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import { FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaYoutube, FaArrowRight } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 const LetsConnect = () => {
@@ -75,20 +75,7 @@ const LetsConnect = () => {
                 <span className="text-sm font-medium text-gray-300">
                   Follow
                 </span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5 text-gray-500 group-hover:text-blue-400 transform group-hover:translate-x-1 transition-all"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M14 5l7 7m0 0l-7 7m7-7H3"
-                  />
-                </svg>
+                <FaArrowRight className="h-5 w-5 text-gray-500 group-hover:text-blue-400 transform group-hover:translate-x-1 transition-all" />
               </div>
             </a>
           ))}

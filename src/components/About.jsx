@@ -6,6 +6,7 @@ import {
   FaArrowRight,
   FaFileAlt,
 } from "react-icons/fa";
+import { BiSolidTimeFive } from "react-icons/bi";
 import AOS from "aos";
 import "aos/dist/aos.css"; // import AOS CSS
 
@@ -37,14 +38,15 @@ const About = () => {
         >
           <p className="text-lg md:text-xl">
             Hello, I'm <span className="font-semibold">James Ndung'u</span> — a
-            passionate full-stack developer. I specialize in{" "}
+            passionate full-stack developer based in Nairobi, Kenya. I
+            specialize in{" "}
             <span className="text-[#61DAFB] font-semibold">React</span>,
             <span className="text-[#68A063] font-semibold"> Node.js</span>, and{" "}
-            <span className="text-[#47A248] font-semibold">MongoDB</span>, and
-            I'm constantly improving my skills in building web and mobile
-            applications. I am currently a TVET trainer and am also working on
-            several personal projects in the e-commerce space. My goal is to
-            continue pushing boundaries in tech.
+            <span className="text-[#47A248] font-semibold">MongoDB</span>. I'm
+            constantly improving my skills in building web applications.
+            Currently, I am working as a TVET trainer and on several personal
+            projects in e-commerce and education spaces. My goal is to continue
+            pushing boundaries in tech.
           </p>
         </div>
 
@@ -96,7 +98,7 @@ const About = () => {
             </h3>
             <div className="flex items-center justify-between">
               <p className="text-sm text-gray-400">
-                E-commerce and booking apps, and more.
+                E-commerce, booking app and more.
               </p>
               <FaArrowRight className="text-gray-600 group-hover:text-indigo-400 transition" />
             </div>
@@ -131,7 +133,7 @@ const About = () => {
           >
             <div className="flex justify-between items-start mb-6">
               <div className="bg-gray-800 p-3 rounded-full">
-                <FaGlobeAmericas className="text-blue-400 text-xl" />
+                <BiSolidTimeFive className="text-blue-400 text-xl" />
               </div>
               <span className="text-4xl font-bold text-white">3</span>
             </div>
