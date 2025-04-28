@@ -18,15 +18,17 @@ const Hero = () => {
       className="w-full min-h-screen flex items-center justify-center py-16 px-4 md:py-24 lg:py-32"
     >
       <div className="container mx-auto max-w-6xl px-4 flex flex-col lg:flex-row items-center justify-between gap-8">
-        {/* Left Content */}
+        {/* Left Side */}
         <div
           className="flex flex-col items-center lg:items-start text-center lg:text-left max-w-2xl"
           data-aos="fade-up"
         >
+          {/* Let's Build Button */}
           <button className="mb-4 px-4 py-2 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-sm font-semibold">
-            🚀 Ready to Innovate
+            🚀 Let's Build the Future
           </button>
 
+          {/* Name */}
           <h1
             className="text-3xl md:text-5xl font-bold text-white leading-tight mb-4"
             data-aos="fade-left"
@@ -34,20 +36,35 @@ const Hero = () => {
             James Ndung'u
           </h1>
 
-          <h2
-            className="text-2xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600 mb-2"
-            data-aos="fade-left"
+          {/* Image - Small Screens */}
+          <div
+            className="flex w-3/4 justify-center mt-4 mb-4 lg:hidden"
+            data-aos="fade-up"
           >
-            Full Stack Developer
-          </h2>
+            <img
+              src="/james.png"
+              alt="James photo"
+              className="w-3/4 max-w-xs rounded-full border border-white"
+            />
+          </div>
 
-          <h2
-            className="text-2xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600 mb-4"
-            data-aos="fade-left"
-          >
-            TVET Trainer
-          </h2>
+          {/* Titles */}
+          <div className="mb-4">
+            <h2
+              className="text-2xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600 mb-2"
+              data-aos="fade-left"
+            >
+              Full Stack Developer
+            </h2>
+            <h2
+              className="text-2xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600"
+              data-aos="fade-left"
+            >
+              TVET Trainer
+            </h2>
+          </div>
 
+          {/* Description */}
           <p className="text-gray-300 mb-6" data-aos="fade-left">
             Building innovative, robust, and user-friendly digital solutions
             that drive business growth.
@@ -68,7 +85,7 @@ const Hero = () => {
             )}
           </div>
 
-          {/* Buttons */}
+          {/* Action Buttons */}
           <div className="flex gap-4 justify-center lg:justify-start mb-6">
             <a
               href="#projects"
@@ -107,21 +124,9 @@ const Hero = () => {
               <FaLinkedin size={24} />
             </a>
           </div>
-
-          {/* Image for small/medium screens */}
-          <div
-            className="flex lg:hidden w-full justify-center mt-8"
-            data-aos="fade-up"
-          >
-            <img
-              src="/james.png"
-              alt="James photo"
-              className="w-full max-w-xs rounded-full border border-white"
-            />
-          </div>
         </div>
 
-        {/* Image for large screens */}
+        {/* Image - Large Screens */}
         <div
           className="hidden lg:flex w-full lg:w-1/2 justify-center"
           data-aos="fade-left"
@@ -129,7 +134,7 @@ const Hero = () => {
           <img
             src="/james.png"
             alt="Developer Illustration"
-            className="w-full max-w-md rounded-full border border-gray-700"
+            className="w-3/4 max-w-md rounded-full border border-gray-700"
           />
         </div>
       </div>
