@@ -33,7 +33,7 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="w-full px-4 mt-48 text-white md:min-h-screen">
+    <section id="services" className="w-full px-4 mt-12 text-white">
       <div className="max-w-6xl mx-auto text-center">
         <h2
           className="text-4xl md:text-5xl font-bold mb-4 md:pt-12 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600"

@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaCode, FaFileAlt } from "react-icons/fa";
+import { MdContactPhone } from "react-icons/md";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -24,9 +26,7 @@ const Hero = () => {
           data-aos="fade-up"
         >
           {/* Let's Build Button */}
-          <p className="mb-4 text-2xl">
-          👋 🌍
-          </p>
+          <p className="mb-4 text-2xl">👋 🌍</p>
 
           {/* Name */}
           <h1
@@ -85,22 +85,30 @@ const Hero = () => {
             )}
           </div>
 
-          {/* Action Buttons */}
-          <div className="flex gap-4 justify-center lg:justify-start mb-6">
-            <a
-              href="#projects"
-              className="px-6 py-2 rounded-lg bg-black/40 backdrop-blur text-white border border-white/10 hover:bg-white/10 transition"
-              data-aos="fade-up"
-            >
-              Projects ↗
-            </a>
+          {/* Action Buttons - UPDATED WITH CONSISTENT STYLING */}
+          <div className="flex flex-wrap gap-4 justify-center lg:justify-start mb-6">
+            {/* Contact Button */}
             <a
               href="#contact"
-              className="px-6 py-2 rounded-md bg-gradient-to-r from-purple-500 to-pink-500 text-sm md:text-base content-center text-white"
+              className="flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 transition px-6 py-3 rounded-lg text-white"
+              data-aos="fade-up"
+            ><span><MdContactPhone /></span>
+              <span>Contact</span>
+            </a>
+            
+            {/* Resume Button */}
+            <a
+              href="/James Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 transition px-6 py-3 rounded-lg text-white"
               data-aos="fade-up"
             >
-              Contact ✉
+              <FaFileAlt />
+              <span>View Resume</span>
             </a>
+
+            
           </div>
 
           {/* Social Links */}

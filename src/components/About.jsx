@@ -22,7 +22,7 @@ const About = () => {
   }, []);
 
   return (
-    <section id="about" className="w-full min-h-screen py-16 px-4 text-white">
+    <section id="about" className="w-full py-16 px-4 text-white">
       <div className="max-w-5xl mx-auto">
         {/* Heading */}
         <h2
@@ -38,14 +38,14 @@ const About = () => {
           data-aos="fade-up"
           data-aos-delay="200"
         >
-          <p className="text-lg md:text-xl mb-6">
+          <p className="text-lg mb-6">
             My journey in tech began with a passion for solving problems through
             code. With 3+ years of hands-on experience, I've evolved from
             building simple websites to developing complex full-stack
             applications that deliver real-world value.
           </p>
 
-          <p className="text-lg md:text-xl">
+          <p className="text-lg">
             As a TVET trainer, I'm committed to empowering the next generation
             of developers by sharing my knowledge and experience. I believe in
             the power of education to transform lives and communities, which is

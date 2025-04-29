@@ -119,7 +119,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="w-full px-4 mt-48 text-white md:min-h-screen"
+      className="w-full px-4 mt-48 mb-12 text-white"
     >
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
