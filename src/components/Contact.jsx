@@ -84,10 +84,10 @@ const Contact = () => {
               <div className="bg-gray-800/70 p-4 rounded-lg">
                 <h4 className="text-sm text-gray-300 mb-1">Email</h4>
                 <a
-                  href="mailto:contact@abhishekganvir.com"
+                  href="mailto:jimmindungu3@gmail.com"
                   className="text-blue-400 hover:text-blue-300 transition"
                 >
-                  contact@abhishekganvir.com
+                  jimmindungu3@gmail.com
                 </a>
               </div>
 
