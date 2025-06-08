@@ -13,7 +13,6 @@ import "aos/dist/aos.css";
 
 const About = () => {
   useEffect(() => {
-    // Initialize AOS animation library
     AOS.init({
       duration: 1000,
       easing: "ease-in-out",
@@ -22,23 +21,21 @@ const About = () => {
   }, []);
 
   return (
-    <section id="about" className="w-full py-16 px-4 text-white">
+    <section id="about" className="w-full px-4 py-16 text-white">
       <div className="max-w-5xl mx-auto">
-        {/* Heading */}
         <h2
-          className="text-4xl md:text-5xl font-bold text-center mb-8 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600"
+          className="mb-8 text-4xl font-bold text-center text-transparent md:text-5xl bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600"
           data-aos="fade-up"
         >
           About Me
         </h2>
 
-        {/* Professional Journey */}
         <div
-          className="text-center mb-10"
+          className="mb-10 text-center"
           data-aos="fade-up"
           data-aos-delay="200"
         >
-          <p className="text-lg mb-6">
+          <p className="mb-6 text-lg">
             My journey in tech began with a passion for solving problems through
             code. With 3+ years of hands-on experience, I've evolved from
             building simple websites to developing complex full-stack
@@ -53,23 +50,21 @@ const About = () => {
           </p>
         </div>
 
-        {/* Skills Section */}
         <div className="mb-12">
           <h3
-            className="text-2xl font-bold mb-6 text-center"
+            className="mb-6 text-2xl font-bold text-center"
             data-aos="fade-up"
           >
             My Approach
           </h3>
 
           <div
-            className="grid grid-cols-1 md:grid-cols-2 gap-6"
+            className="grid grid-cols-1 gap-6 md:grid-cols-2"
             data-aos="fade-up"
             data-aos-delay="300"
           >
-            {/* Development Philosophy */}
-            <div className="bg-gray-900/60 backdrop-blur p-6 rounded-lg border border-gray-800">
-              <h4 className="text-xl font-semibold mb-3 text-purple-400">
+            <div className="p-6 border border-gray-800 rounded-lg bg-gray-900/60 backdrop-blur">
+              <h4 className="mb-3 text-xl font-semibold text-purple-400">
                 Development Philosophy
               </h4>
               <p className="text-gray-300">
@@ -80,9 +75,8 @@ const About = () => {
               </p>
             </div>
 
-            {/* Teaching Approach */}
-            <div className="bg-gray-900/60 backdrop-blur p-6 rounded-lg border border-gray-800">
-              <h4 className="text-xl font-semibold mb-3 text-blue-400">
+            <div className="p-6 border border-gray-800 rounded-lg bg-gray-900/60 backdrop-blur">
+              <h4 className="mb-3 text-xl font-semibold text-blue-400">
                 Teaching Approach
               </h4>
               <p className="text-gray-300">
@@ -95,90 +89,85 @@ const About = () => {
           </div>
         </div>
 
-        {/* Stats and achievements */}
-        <h3 className="text-2xl font-bold mb-6 text-center" data-aos="fade-up">
+        <h3 className="mb-6 text-2xl font-bold text-center" data-aos="fade-up">
           Career Highlights
         </h3>
 
         <div
-          className="grid grid-cols-1 md:grid-cols-3 gap-6"
+          className="grid grid-cols-1 gap-6 md:grid-cols-3"
           data-aos="fade-up"
           data-aos-delay="600"
         >
-          {/* Projects card */}
           <div
-            className="bg-gray-900/80 backdrop-blur rounded-lg p-6 border border-gray-800 hover:border-indigo-900/50 transition group"
+            className="p-6 transition border border-gray-800 rounded-lg bg-gray-900/80 backdrop-blur hover:border-indigo-900/50 group"
             data-aos="fade-up"
           >
-            <div className="flex justify-between items-start mb-6">
-              <div className="bg-gray-800 p-3 rounded-full">
-                <FaCode className="text-indigo-400 text-xl" />
+            <div className="flex items-start justify-between mb-6">
+              <div className="p-3 bg-gray-800 rounded-full">
+                <FaCode className="text-xl text-indigo-400" />
               </div>
               <span className="text-4xl font-bold text-white">4+</span>
             </div>
-            <h3 className="text-lg font-semibold uppercase tracking-wider text-gray-300 mb-1">
+            <h3 className="mb-1 text-lg font-semibold tracking-wider text-gray-300 uppercase">
               Key Projects
             </h3>
             <div className="flex items-center justify-between">
               <p className="text-sm text-gray-400">
                 From e-commerce to educational platforms
               </p>
-              <FaArrowRight className="text-gray-600 group-hover:text-indigo-400 transition" />
+              <FaArrowRight className="text-gray-600 transition group-hover:text-indigo-400" />
             </div>
           </div>
 
-          {/* Education card */}
           <div
-            className="bg-gray-900/80 backdrop-blur rounded-lg p-6 border border-gray-800 hover:border-indigo-900/50 transition group"
+            className="p-6 transition border border-gray-800 rounded-lg bg-gray-900/80 backdrop-blur hover:border-indigo-900/50 group"
             data-aos="fade-up"
           >
-            <div className="flex justify-between items-start mb-6">
-              <div className="bg-gray-800 p-3 rounded-full">
-                <FaGraduationCap className="text-purple-400 text-xl" />
+            <div className="flex items-start justify-between mb-6">
+              <div className="p-3 bg-gray-800 rounded-full">
+                <FaGraduationCap className="text-xl text-purple-400" />
               </div>
               <span className="text-4xl font-bold text-white">3+</span>
             </div>
-            <h3 className="text-lg font-semibold uppercase tracking-wider text-gray-300 mb-1">
+            <h3 className="mb-1 text-lg font-semibold tracking-wider text-gray-300 uppercase">
               Certificates
             </h3>
             <div className="flex items-center justify-between">
               <p className="text-sm text-gray-400">
                 Software engineering & TVET training
               </p>
-              <FaArrowRight className="text-gray-600 group-hover:text-purple-400 transition" />
+              <FaArrowRight className="text-gray-600 transition group-hover:text-purple-400" />
             </div>
           </div>
 
-          {/* Work Experience card */}
           <div
-            className="bg-gray-900/80 backdrop-blur rounded-lg p-6 border border-gray-800 hover:border-indigo-900/50 transition group"
+            className="p-6 transition border border-gray-800 rounded-lg bg-gray-900/80 backdrop-blur hover:border-indigo-900/50 group"
             data-aos="fade-up"
           >
-            <div className="flex justify-between items-start mb-6">
-              <div className="bg-gray-800 p-3 rounded-full">
-                <MdOutlineWorkHistory className="text-blue-400 text-xl" />
+            <div className="flex items-start justify-between mb-6">
+              <div className="p-3 bg-gray-800 rounded-full">
+                <MdOutlineWorkHistory className="text-xl text-blue-400" />
               </div>
               <span className="text-4xl font-bold text-white">3+</span>
             </div>
-            <h3 className="text-lg font-semibold uppercase tracking-wider text-gray-300 mb-1">
+            <h3 className="mb-1 text-lg font-semibold tracking-wider text-gray-300 uppercase">
               Years of experience
             </h3>
             <div className="flex items-center justify-between">
               <p className="text-sm text-gray-400">
                 Balancing development & teaching
               </p>
-              <FaArrowRight className="text-gray-600 group-hover:text-blue-400 transition" />
+              <FaArrowRight className="text-gray-600 transition group-hover:text-blue-400" />
             </div>
           </div>
         </div>
 
-        {/* Action buttons */}
         <div
           className="flex flex-wrap justify-center gap-4 mt-12"
           data-aos="fade-up"
           data-aos-delay="400"
         >
-          <button className="flex items-center gap-2 bg-indigo-600/80 hover:bg-indigo-700 transition px-6 py-3 rounded-lg">
+          <button className="flex items-center gap-2 px-6 py-3 transition rounded-lg bg-indigo-600/80 hover:bg-indigo-700">
             <a
               href="/James Resume.pdf"
               target="_blank"
@@ -192,7 +181,7 @@ const About = () => {
 
           <a
             href="#projects"
-            className="flex items-center gap-2 bg-purple-900/60 hover:bg-purple-900/80 border border-purple-500/30 transition px-6 py-3 rounded-lg"
+            className="flex items-center gap-2 px-6 py-3 transition border rounded-lg bg-purple-900/60 hover:bg-purple-900/80 border-purple-500/30"
           >
             <FaCode />
             <span>View Projects</span>

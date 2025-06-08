@@ -35,29 +35,26 @@ const LetsConnect = () => {
   ];
 
   return (
-    <section id="socials" className="w-full py-16 px-4 text-white ">
+    <section id="socials" className="w-full px-4 py-16 text-white ">
       <div className="max-w-6xl mx-auto">
-        {/* Heading */}
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
+        <h2 className="mb-4 text-4xl font-bold text-center text-transparent md:text-5xl bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
           Let's Connect
         </h2>
 
-        {/* Subtitle */}
-        <p className="text-center text-gray-300 mb-12 max-w-3xl mx-auto">
+        <p className="max-w-3xl mx-auto mb-12 text-center text-gray-300">
           Follow me on social media to stay updated with my latest projects,
           articles, and activities. Let's build a community of tech enthusiasts
           together!
         </p>
 
-        {/* Social Media Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+        <div className="grid max-w-5xl grid-cols-1 gap-6 mx-auto sm:grid-cols-2 lg:grid-cols-4">
           {socialPlatforms.map((platform, index) => (
             <a
               key={index}
               href={platform.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-gray-900/80 backdrop-blur rounded-xl p-6 border border-gray-800 hover:border-gray-700 transition group flex flex-col"
+              className="flex flex-col p-6 transition border border-gray-800 bg-gray-900/80 backdrop-blur rounded-xl hover:border-gray-700 group"
             >
               <div
                 className={`w-14 h-14 rounded-full flex items-center justify-center mb-4 bg-gray-800/70 text-gray-300 group-${platform.color} transition duration-300`}
@@ -65,9 +62,9 @@ const LetsConnect = () => {
                 {platform.icon}
               </div>
 
-              <h3 className="text-xl font-semibold mb-2">{platform.name}</h3>
+              <h3 className="mb-2 text-xl font-semibold">{platform.name}</h3>
 
-              <p className="text-gray-400 text-sm mb-4 flex-grow">
+              <p className="flex-grow mb-4 text-sm text-gray-400">
                 {platform.description}
               </p>
 
@@ -75,7 +72,7 @@ const LetsConnect = () => {
                 <span className="text-sm font-medium text-gray-300">
                   Follow
                 </span>
-                <FaArrowRight className="h-5 w-5 text-gray-500 group-hover:text-blue-400 transform group-hover:translate-x-1 transition-all" />
+                <FaArrowRight className="w-5 h-5 text-gray-500 transition-all transform group-hover:text-blue-400 group-hover:translate-x-1" />
               </div>
             </a>
           ))}

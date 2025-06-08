@@ -1,4 +1,3 @@
-import React from "react";
 import AnimatedBackground from "./components/Background";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
@@ -13,10 +12,8 @@ import Services from "./components/Services";
 const App = () => {
   return (
     <div className="relative min-h-screen">
-      {/* Background component with negative z-index */}
       <AnimatedBackground />
 
-      {/* Content container with positive z-index */}
       <div className="relative z-10">
         <Navbar />
         <Hero />
@@ -27,7 +24,6 @@ const App = () => {
         <LetsConnect />
         <Contact />
         <Footer />
-        {/* Add your other components here */}
       </div>
     </div>
   );

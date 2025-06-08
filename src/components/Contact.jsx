@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { FaEnvelope, FaPaperPlane, FaCheck } from "react-icons/fa";
+import { useState } from "react";
+import { FaPaperPlane, FaCheck } from "react-icons/fa";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -25,7 +25,6 @@ const Contact = () => {
     setErrorMessage("");
 
     try {
-      // Using the Formspree URL you provided
       const response = await fetch("https://formspree.io/f/mkgrgkvz", {
         method: "POST",
         headers: {
@@ -38,10 +37,8 @@ const Contact = () => {
         throw new Error("Failed to submit form. Please try again.");
       }
 
-      // Form submitted successfully
       setIsSubmitted(true);
 
-      // Reset form after showing success message
       setTimeout(() => {
         setIsSubmitted(false);
         setFormData({ name: "", email: "", message: "" });
@@ -58,46 +55,43 @@ const Contact = () => {
 
   return (
     <section id="contact" className="py-16 mb-12">
-      <div className="max-w-6xl mx-auto px-4 text-white">
-        {/* Heading */}
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
+      <div className="max-w-6xl px-4 mx-auto text-white">
+        <h2 className="mb-4 text-4xl font-bold text-center text-transparent md:text-5xl bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
           Leave A Message
         </h2>
 
-        {/* Subtitle */}
-        <p className="text-center text-gray-300 mb-12 max-w-3xl mx-auto">
+        <p className="max-w-3xl mx-auto mb-12 text-center text-gray-300">
           Have a project in mind or want to discuss collaboration opportunities?
           I'd love to hear from you!
         </p>
 
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 max-w-5xl mx-auto">
-          {/* Left side - Contact info */}
-          <div className="lg:col-span-2 bg-gray-900/80 backdrop-blur rounded-xl p-6 border border-gray-800 flex flex-col">
+        <div className="grid max-w-5xl grid-cols-1 gap-8 mx-auto lg:grid-cols-5">
+          <div className="flex flex-col p-6 border border-gray-800 lg:col-span-2 bg-gray-900/80 backdrop-blur rounded-xl">
             <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-2">Let's Talk</h3>
-              <p className="text-gray-400 text-sm">
+              <h3 className="mb-2 text-xl font-semibold">Let's Talk</h3>
+              <p className="text-sm text-gray-400">
                 Fill out the form or reach out directly through:
               </p>
             </div>
 
-            <div className="space-y-6 flex-grow">
-              <div className="bg-gray-800/70 p-4 rounded-lg">
-                <h4 className="text-sm text-gray-300 mb-1">Email</h4>
+            <div className="flex-grow space-y-6">
+              <div className="p-4 rounded-lg bg-gray-800/70">
+                <h4 className="mb-1 text-sm text-gray-300">Email</h4>
                 <a
                   href="mailto:jimmindungu3@gmail.com"
-                  className="text-blue-400 hover:text-blue-300 transition"
+                  className="text-blue-400 transition hover:text-blue-300"
                 >
                   jimmindungu3@gmail.com
                 </a>
               </div>
 
-              <div className="bg-gray-800/70 p-4 rounded-lg">
-                <h4 className="text-sm text-gray-300 mb-1">Response Time</h4>
+              <div className="p-4 rounded-lg bg-gray-800/70">
+                <h4 className="mb-1 text-sm text-gray-300">Response Time</h4>
                 <p className="text-white">Usually within 24-48 hours</p>
               </div>
             </div>
 
-            <div className="mt-6 pt-6 border-t border-gray-800">
+            <div className="pt-6 mt-6 border-t border-gray-800">
               <p className="text-sm text-gray-400">
                 I'm currently looking for new opportunities. Whether you have a
                 question or just want to say hi, I'll try my best to get back to
@@ -106,14 +100,13 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Right side - Contact form */}
-          <div className="lg:col-span-3 bg-gray-900/80 backdrop-blur rounded-xl p-6 border border-gray-800">
+          <div className="p-6 border border-gray-800 lg:col-span-3 bg-gray-900/80 backdrop-blur rounded-xl">
             {isSubmitted ? (
-              <div className="h-full flex flex-col items-center justify-center text-center p-6">
-                <div className="bg-green-500/20 p-4 rounded-full mb-4">
-                  <FaCheck className="text-green-400 text-3xl" />
+              <div className="flex flex-col items-center justify-center h-full p-6 text-center">
+                <div className="p-4 mb-4 rounded-full bg-green-500/20">
+                  <FaCheck className="text-3xl text-green-400" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Message Sent!</h3>
+                <h3 className="mb-2 text-xl font-semibold">Message Sent!</h3>
                 <p className="text-gray-300">
                   Thank you for reaching out. I'll get back to you as soon as
                   possible.
@@ -122,7 +115,7 @@ const Contact = () => {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
                 {errorMessage && (
-                  <div className="bg-red-500/20 text-red-400 p-4 rounded-lg text-sm">
+                  <div className="p-4 text-sm text-red-400 rounded-lg bg-red-500/20">
                     {errorMessage}
                   </div>
                 )}
@@ -130,7 +123,7 @@ const Contact = () => {
                 <div>
                   <label
                     htmlFor="name"
-                    className="block text-sm font-medium text-gray-300 mb-1"
+                    className="block mb-1 text-sm font-medium text-gray-300"
                   >
                     Name
                   </label>
@@ -141,7 +134,7 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full bg-gray-800/50 border border-gray-700 rounded-lg py-3 px-4 text-white placeholder-gray-500 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
+                    className="w-full px-4 py-3 text-white placeholder-gray-500 transition border border-gray-700 rounded-lg outline-none bg-gray-800/50 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Your name"
                   />
                 </div>
@@ -149,7 +142,7 @@ const Contact = () => {
                 <div>
                   <label
                     htmlFor="email"
-                    className="block text-sm font-medium text-gray-300 mb-1"
+                    className="block mb-1 text-sm font-medium text-gray-300"
                   >
                     Email
                   </label>
@@ -160,7 +153,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full bg-gray-800/50 border border-gray-700 rounded-lg py-3 px-4 text-white placeholder-gray-500 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
+                    className="w-full px-4 py-3 text-white placeholder-gray-500 transition border border-gray-700 rounded-lg outline-none bg-gray-800/50 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="your.email@example.com"
                   />
                 </div>
@@ -168,7 +161,7 @@ const Contact = () => {
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-sm font-medium text-gray-300 mb-1"
+                    className="block mb-1 text-sm font-medium text-gray-300"
                   >
                     Message
                   </label>
@@ -179,7 +172,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     rows={5}
-                    className="w-full bg-gray-800/50 border border-gray-700 rounded-lg py-3 px-4 text-white placeholder-gray-500 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition resize-none"
+                    className="w-full px-4 py-3 text-white placeholder-gray-500 transition border border-gray-700 rounded-lg outline-none resize-none bg-gray-800/50 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Your message here..."
                   />
                 </div>
@@ -196,7 +189,7 @@ const Contact = () => {
                   {isSubmitting ? (
                     <>
                       <svg
-                        className="animate-spin h-5 w-5 text-white"
+                        className="w-5 h-5 text-white animate-spin"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
                         viewBox="0 0 24 24"

@@ -1,10 +1,9 @@
-import { FaGithub, FaLinkedin, FaEnvelope, FaXTwitter } from "react-icons/fa6"; // or FaTwitter if you prefer the old Twitter logo
+import { FaGithub, FaLinkedin, FaEnvelope, FaXTwitter } from "react-icons/fa6";
 
 export default function Footer() {
   return (
     <footer className="w-full px-4 py-4 text-white">
       <div className="max-w-6xl mx-auto text-center">
-        {/* Social links */}
         <div className="flex justify-center gap-8 mb-8">
           <a
             href="https://github.com/jimmindungu3"
@@ -47,8 +46,6 @@ export default function Footer() {
             />
           </a>
         </div>
-
-        {/* Footer content */}
         <p className="text-gray-400 text-sm mb-4">
           Built with ❤️ | James Ng'ang'a Ndung'u | © {new Date().getFullYear()}
         </p>

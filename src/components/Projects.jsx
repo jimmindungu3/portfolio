@@ -1,18 +1,16 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import {
   FaCode,
   FaCertificate,
   FaExternalLinkAlt,
-  FaArrowRight,
   FaGithub,
   FaTimes,
 } from "react-icons/fa";
 import AOS from "aos";
-import "aos/dist/aos.css"; // import AOS CSS
+import "aos/dist/aos.css";
 
 const Projects = () => {
   const [activeTab, setActiveTab] = useState("projects");
-  // Add state for the image preview modal
   const [previewImage, setPreviewImage] = useState(null);
 
   const projectsData = [
@@ -58,7 +56,6 @@ const Projects = () => {
     },
   ];
 
-  // Certificate data
   const certificatesData = [
     {
       id: 1,
@@ -80,21 +77,16 @@ const Projects = () => {
     },
   ];
 
-  // Function to open the image preview modal
   const openPreview = (imageSrc) => {
     setPreviewImage(imageSrc);
-    // Prevent scrolling when modal is open
     document.body.style.overflow = "hidden";
   };
 
-  // Function to close the image preview modal
   const closePreview = () => {
     setPreviewImage(null);
-    // Re-enable scrolling when modal is closed
     document.body.style.overflow = "auto";
   };
 
-  // Close modal when Escape key is pressed
   useEffect(() => {
     const handleEscKey = (e) => {
       if (e.key === "Escape" && previewImage) {
@@ -117,22 +109,17 @@ const Projects = () => {
   }, []);
 
   return (
-    <section
-      id="projects"
-      className="w-full px-4 mt-48 mb-12 text-white"
-    >
+    <section id="projects" className="w-full px-4 mt-48 mb-12 text-white">
       <div className="max-w-6xl mx-auto">
-        {/* Heading */}
         <h2
-          className="text-4xl md:text-5xl font-bold text-center mb-4 lg:pt-12 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600"
+          className="mb-4 text-4xl font-bold text-center text-transparent md:text-5xl lg:pt-12 bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600"
           data-aos="fade-up"
         >
           Portfolio
         </h2>
 
-        {/* Subtitle */}
         <p
-          className="text-center text-gray-300 mb-12 max-w-3xl mx-auto"
+          className="max-w-3xl mx-auto mb-12 text-center text-gray-300"
           data-aos="fade-up"
           data-aos-delay="200"
         >
@@ -141,8 +128,7 @@ const Projects = () => {
           and career paths.
         </p>
 
-        {/* Tabs */}
-        <div className="flex overflow-x-auto md:justify-center mb-10 gap-2 p-2 rounded-xl bg-gray-900/50 backdrop-blur border border-gray-800 max-w-2xl mx-auto">
+        <div className="flex max-w-2xl gap-2 p-2 mx-auto mb-10 overflow-x-auto border border-gray-800 md:justify-center rounded-xl bg-gray-900/50 backdrop-blur">
           <button
             onClick={() => setActiveTab("projects")}
             className={`px-6 py-3 rounded-lg flex items-center justify-center gap-2 min-w-[120px] transition ${
@@ -175,33 +161,30 @@ const Projects = () => {
           </button>
         </div>
 
-        {/* Projects Grid */}
         {activeTab === "projects" && (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {projectsData.map((project) => (
               <div
                 key={project.id}
-                className="bg-gray-900/80 backdrop-blur rounded-xl overflow-hidden border border-gray-800 hover:border-indigo-900/50 transition group"
+                className="overflow-hidden transition border border-gray-800 bg-gray-900/80 backdrop-blur rounded-xl hover:border-indigo-900/50 group"
                 data-aos="fade-up"
                 data-aos-delay={project.id * 100}
               >
-                {/* Project image */}
                 <div
                   className={`relative h-52 overflow-hidden bg-gradient-to-br ${project.bgColor}`}
                 >
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-contain p-3 transform group-hover:scale-105 transition duration-300"
+                    className="object-contain w-full h-full p-3 transition duration-300 transform group-hover:scale-105"
                   />
                 </div>
 
-                {/* Project content */}
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">
+                  <h3 className="mb-2 text-xl font-semibold">
                     {project.title}
                   </h3>
-                  <p className="text-gray-300 text-sm mb-6">
+                  <p className="mb-6 text-sm text-gray-300">
                     {project.description}
                   </p>
 
@@ -209,7 +192,7 @@ const Projects = () => {
                     <a
                       href={project.demoUrl}
                       target="_blank"
-                      className="text-blue-400 hover:text-blue-300 flex items-center gap-1 text-sm font-medium transition"
+                      className="flex items-center gap-1 text-sm font-medium text-blue-400 transition hover:text-blue-300"
                     >
                       <span>Live Demo</span>
                       <FaExternalLinkAlt size={12} />
@@ -218,7 +201,7 @@ const Projects = () => {
                     <a
                       href={project.detailsUrl}
                       target="_blank"
-                      className="text-white hover:text-purple-400 flex items-center gap-1 text-sm font-medium transition"
+                      className="flex items-center gap-1 text-sm font-medium text-white transition hover:text-purple-400"
                     >
                       <FaGithub size={18} />
                     </a>
@@ -229,13 +212,12 @@ const Projects = () => {
           </div>
         )}
 
-        {/* Certificates Grid */}
         {activeTab === "certificates" && (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {certificatesData.map((certificate) => (
               <div
                 key={certificate.id}
-                className="bg-gray-900/80 backdrop-blur rounded-xl overflow-hidden border border-gray-800 hover:border-purple-900/50 transition group"
+                className="overflow-hidden transition border border-gray-800 bg-gray-900/80 backdrop-blur rounded-xl hover:border-purple-900/50 group"
                 data-aos="fade-up"
                 data-aos-delay={certificate.id * 100}
               >
@@ -246,11 +228,10 @@ const Projects = () => {
                   <img
                     src={certificate.image}
                     alt={certificate.title}
-                    className="w-full h-full object-contain p-4 transform group-hover:scale-105 transition duration-300"
+                    className="object-contain w-full h-full p-4 transition duration-300 transform group-hover:scale-105"
                   />
-                  {/* Add a visual indicator that this is clickable */}
-                  <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-opacity">
-                    <span className="text-white opacity-0 group-hover:opacity-100 transition">
+                  <div className="absolute inset-0 flex items-center justify-center transition-opacity bg-black bg-opacity-0 group-hover:bg-opacity-40">
+                    <span className="text-white transition opacity-0 group-hover:opacity-100">
                       Click to view
                     </span>
                   </div>
@@ -263,26 +244,21 @@ const Projects = () => {
           </div>
         )}
 
-        {/* Image Preview Modal */}
         {previewImage && (
           <div
             className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80"
             onClick={closePreview}
           >
             <div className="relative max-w-4xl max-h-[90vh] w-full mx-4">
-              {/* Close button */}
               <button
-                className="absolute top-2 right-2 text-white bg-gray-900 rounded-full p-2 hover:bg-gray-700 transition"
+                className="absolute p-2 text-white transition bg-gray-900 rounded-full top-2 right-2 hover:bg-gray-700"
                 onClick={closePreview}
               >
                 <FaTimes size={18} />
               </button>
 
               {/* Image */}
-              <div
-                className="relative"
-                onClick={(e) => e.stopPropagation()} // Prevent closing when clicking on the image container
-              >
+              <div className="relative" onClick={(e) => e.stopPropagation()}>
                 <img
                   src={previewImage}
                   alt="Certificate preview"
