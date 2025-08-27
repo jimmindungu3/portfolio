@@ -54,6 +54,16 @@ const Projects = () => {
       detailsUrl: "#",
       bgColor: "from-purple-900/70 to-rose-900/40",
     },
+    {
+      id: 5,
+      title: "Property Listing Website",
+      image: "/mburoti.png",
+      description:
+        "A real estate platform for Mburoti Maguta that lists land and property for sale. Built with the MERN stack, featuring property details, images, pricing, and buyer contact options.",
+      demoUrl: "https://mburoti-maguta-maguta.vercel.app/",
+      detailsUrl: "https://github.com/jimmindungu3",
+      bgColor: "from-emerald-900/70 to-lime-900/40",
+    },
   ];
 
   const certificatesData = [
@@ -61,19 +71,19 @@ const Projects = () => {
       id: 1,
       title: "Software Engineering Certification - Moringa School",
       image: "/moringa-certificate.jpg",
-      bgColor: "from-blue-800/40 to-blue-600/30", // Deep Blue
+      bgColor: "from-blue-800/40 to-blue-600/30",
     },
     {
       id: 2,
       title: "Certificate of Merit - Thika Technical Training Institute",
       image: "/thika-tti-merit.jpeg",
-      bgColor: "from-purple-800/40 to-purple-600/30", // Royal Purple
+      bgColor: "from-purple-800/40 to-purple-600/30",
     },
     {
       id: 3,
       title: "Certificate of Recognition - Kenya National Bureau of Statistics",
       image: "/knbs-certificate.jpg",
-      bgColor: "from-green-800/40 to-green-600/30", // Emerald Green
+      bgColor: "from-green-800/40 to-green-600/30",
     },
   ];
 
