@@ -2,6 +2,7 @@ import { useState } from "react";
 import { FaPaperPlane, FaCheck } from "react-icons/fa";
 
 const Contact = () => {
+  // Form state management
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -11,6 +12,7 @@ const Contact = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
+  // Handle input changes
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -19,6 +21,7 @@ const Contact = () => {
     }));
   };
 
+  // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -39,6 +42,7 @@ const Contact = () => {
 
       setIsSubmitted(true);
 
+      // Reset form after 3 seconds
       setTimeout(() => {
         setIsSubmitted(false);
         setFormData({ name: "", email: "", message: "" });
@@ -56,42 +60,50 @@ const Contact = () => {
   return (
     <section id="contact" className="py-16 mb-12">
       <div className="max-w-6xl px-4 mx-auto text-white">
-        <h2 className="mb-4 text-4xl font-bold text-center text-transparent md:text-5xl bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
+        {/* Section Title */}
+        <h2 className="mb-4 text-4xl font-bold text-center text-transparent md:text-5xl bg-clip-text bg-gradient-to-r from-nyuki-honey to-nyuki-gold">
           Leave A Message
         </h2>
 
+        {/* Section Description */}
         <p className="max-w-3xl mx-auto mb-12 text-center text-gray-300">
           Have a project in mind or want to discuss collaboration opportunities?
           I'd love to hear from you!
         </p>
 
         <div className="grid max-w-5xl grid-cols-1 gap-8 mx-auto lg:grid-cols-5">
-          <div className="flex flex-col p-6 border border-gray-800 lg:col-span-2 bg-gray-900/80 backdrop-blur rounded-xl">
+          {/* Left Side - Contact Info */}
+          <div className="flex flex-col p-6 border border-nyuki-stripe/30 lg:col-span-2 bg-nyuki-black/80 backdrop-blur rounded-xl">
             <div className="mb-6">
-              <h3 className="mb-2 text-xl font-semibold">Let's Talk</h3>
+              <h3 className="mb-2 text-xl font-semibold text-nyuki-wax">
+                Let's Talk
+              </h3>
               <p className="text-sm text-gray-400">
                 Fill out the form or reach out directly through:
               </p>
             </div>
 
             <div className="flex-grow space-y-6">
-              <div className="p-4 rounded-lg bg-gray-800/70">
+              {/* Email Card */}
+              <div className="p-4 rounded-lg bg-nyuki-stripe/10 border border-nyuki-stripe/20">
                 <h4 className="mb-1 text-sm text-gray-300">Email</h4>
                 <a
                   href="mailto:jimmindungu3@gmail.com"
-                  className="text-blue-400 transition hover:text-blue-300"
+                  className="text-nyuki-gold transition hover:text-nyuki-honey"
                 >
                   jimmindungu3@gmail.com
                 </a>
               </div>
 
-              <div className="p-4 rounded-lg bg-gray-800/70">
+              {/* Response Time Card */}
+              <div className="p-4 rounded-lg bg-nyuki-stripe/10 border border-nyuki-stripe/20">
                 <h4 className="mb-1 text-sm text-gray-300">Response Time</h4>
-                <p className="text-white">Usually within 24-48 hours</p>
+                <p className="text-nyuki-wax">Usually within 24-48 hours</p>
               </div>
             </div>
 
-            <div className="pt-6 mt-6 border-t border-gray-800">
+            {/* Footer Note */}
+            <div className="pt-6 mt-6 border-t border-nyuki-stripe/30">
               <p className="text-sm text-gray-400">
                 I'm currently looking for new opportunities. Whether you have a
                 question or just want to say hi, I'll try my best to get back to
@@ -100,26 +112,33 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="p-6 border border-gray-800 lg:col-span-3 bg-gray-900/80 backdrop-blur rounded-xl">
+          {/* Right Side - Contact Form */}
+          <div className="p-6 border border-nyuki-stripe/30 lg:col-span-3 bg-nyuki-black/80 backdrop-blur rounded-xl">
             {isSubmitted ? (
+              // Success Message
               <div className="flex flex-col items-center justify-center h-full p-6 text-center">
-                <div className="p-4 mb-4 rounded-full bg-green-500/20">
-                  <FaCheck className="text-3xl text-green-400" />
+                <div className="p-4 mb-4 rounded-full bg-nyuki-honey/20">
+                  <FaCheck className="text-3xl text-nyuki-gold" />
                 </div>
-                <h3 className="mb-2 text-xl font-semibold">Message Sent!</h3>
+                <h3 className="mb-2 text-xl font-semibold text-nyuki-wax">
+                  Message Sent!
+                </h3>
                 <p className="text-gray-300">
                   Thank you for reaching out. I'll get back to you as soon as
                   possible.
                 </p>
               </div>
             ) : (
+              // Contact Form
               <form onSubmit={handleSubmit} className="space-y-6">
+                {/* Error Message */}
                 {errorMessage && (
                   <div className="p-4 text-sm text-red-400 rounded-lg bg-red-500/20">
                     {errorMessage}
                   </div>
                 )}
 
+                {/* Name Input */}
                 <div>
                   <label
                     htmlFor="name"
@@ -134,11 +153,12 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 text-white placeholder-gray-500 transition border border-gray-700 rounded-lg outline-none bg-gray-800/50 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 text-white placeholder-gray-500 transition border border-nyuki-stripe/30 rounded-lg outline-none bg-nyuki-black/50 focus:ring-2 focus:ring-nyuki-honey focus:border-transparent"
                     placeholder="Your name"
                   />
                 </div>
 
+                {/* Email Input */}
                 <div>
                   <label
                     htmlFor="email"
@@ -153,11 +173,12 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 text-white placeholder-gray-500 transition border border-gray-700 rounded-lg outline-none bg-gray-800/50 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 text-white placeholder-gray-500 transition border border-nyuki-stripe/30 rounded-lg outline-none bg-nyuki-black/50 focus:ring-2 focus:ring-nyuki-honey focus:border-transparent"
                     placeholder="your.email@example.com"
                   />
                 </div>
 
+                {/* Message Textarea */}
                 <div>
                   <label
                     htmlFor="message"
@@ -172,24 +193,25 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     rows={5}
-                    className="w-full px-4 py-3 text-white placeholder-gray-500 transition border border-gray-700 rounded-lg outline-none resize-none bg-gray-800/50 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 text-white placeholder-gray-500 transition border border-nyuki-stripe/30 rounded-lg outline-none resize-none bg-nyuki-black/50 focus:ring-2 focus:ring-nyuki-honey focus:border-transparent"
                     placeholder="Your message here..."
                   />
                 </div>
 
+                {/* Submit Button */}
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`flex items-center justify-center gap-2 w-full py-3 px-4 rounded-lg ${
+                  className={`flex items-center justify-center gap-2 w-full py-3 px-4 rounded-lg font-semibold transition ${
                     isSubmitting
-                      ? "bg-gray-700 cursor-not-allowed"
-                      : "bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
-                  } transition text-white font-medium`}
+                      ? "bg-gray-700 cursor-not-allowed text-gray-400"
+                      : "bg-gradient-to-r from-nyuki-honey to-nyuki-gold text-nyuki-black hover:from-nyuki-gold hover:to-nyuki-honey"
+                  }`}
                 >
                   {isSubmitting ? (
                     <>
                       <svg
-                        className="w-5 h-5 text-white animate-spin"
+                        className="w-5 h-5 animate-spin"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
                         viewBox="0 0 24 24"

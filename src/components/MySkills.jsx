@@ -1,15 +1,6 @@
 import { useState } from "react";
-import { SiMongodb, SiExpress, SiDjango, SiPostman } from "react-icons/si";
-import {
-  FaReact,
-  FaNodeJs,
-  FaPython,
-  FaGitAlt,
-  FaChrome,
-  FaJira,
-  FaFigma,
-  FaExternalLinkAlt,
-} from "react-icons/fa";
+import { SiMongodb, SiExpress, SiPostman } from "react-icons/si";
+import { FaReact, FaNodeJs, FaGitAlt, FaExternalLinkAlt } from "react-icons/fa";
 import { BsFiletypeSql } from "react-icons/bs";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { VscVscode } from "react-icons/vsc";
@@ -20,144 +11,143 @@ export default function MySkills() {
   const skills = {
     mongodb: {
       title: "MongoDB",
-      description: "Flexible NoSQL database storing JSON-like documents.",
+      description:
+        "Designed flexible schemas for Xirion-Africa and Tiketa, ensuring scalable data storage for products, users, and transactions.",
       icon: <SiMongodb className="text-green-500" size={48} />,
       details: [
-        "Schema design",
-        "Aggregation",
-        "Atlas deployment",
-        "Data modeling",
+        "Product catalog modeling",
+        "User authentication storage",
+        "Order & transaction tracking",
+        "Aggregation pipelines for reporting",
       ],
     },
     express: {
       title: "Express.js",
-      description: "Minimal web framework for Node.js APIs.",
+      description:
+        "Built RESTful APIs powering user authentication, product management, and payment processing for MERN projects.",
       icon: <SiExpress className="text-gray-400" size={48} />,
-      details: ["REST APIs", "Middleware", "Authentication", "Routing"],
+      details: [
+        "Authentication endpoints",
+        "CRUD APIs for products & orders",
+        "Middleware for validation & security",
+        "Integration with M-Pesa payments",
+      ],
     },
     react: {
       title: "React",
-      description: "Frontend library for building UIs with components.",
+      description:
+        "Developed dynamic, responsive UIs for online stores and ticketing platforms, implementing reusable components and state management.",
       icon: <FaReact className="text-blue-400" size={48} />,
-      details: ["Hooks", "Context API", "Component-driven", "State management"],
+      details: [
+        "Component-driven design",
+        "React Router for navigation",
+        "State management with hooks",
+        "Form handling & validations",
+      ],
     },
     node: {
       title: "Node.js",
-      description: "JavaScript runtime for backend services.",
+      description:
+        "Created backend services for MERN applications, handling server-side logic, API routing, and real-time updates with Socket.IO.",
       icon: <FaNodeJs className="text-green-400" size={48} />,
-      details: ["Event-driven", "NPM", "Backend APIs", "Microservices"],
-    },
-    python: {
-      title: "Python",
-      description: "High-level language for automation and backend.",
-      icon: <FaPython className="text-yellow-400" size={48} />,
-      details: ["Scripting", "Data analysis", "Machine learning", "Web apps"],
-    },
-    django: {
-      title: "Django",
-      description: "High-level Python framework for rapid web development.",
-      icon: <SiDjango className="text-green-600" size={48} />,
       details: [
-        "ORM",
-        "Authentication",
-        "Django REST Framework",
-        "MVC pattern",
+        "Server setup & routing",
+        "REST API logic",
+        "Real-time notifications",
+        "Payment integration",
       ],
-    },
-    sql: {
-      title: "SQL",
-      description: "Language for relational database management.",
-      icon: <BsFiletypeSql className="text-blue-500" size={48} />,
-      details: ["Joins", "Subqueries", "Optimization", "Data modeling"],
     },
     tailwindcss: {
       title: "Tailwind CSS",
-      description: "Utility-first CSS framework for responsive designs.",
+      description:
+        "Styled responsive interfaces for projects quickly, ensuring consistent branding and modern layouts.",
       icon: <RiTailwindCssFill className="text-teal-400" size={48} />,
       details: [
-        "Responsive design",
-        "Dark mode",
-        "Custom theming",
-        "Component styling",
+        "Responsive product pages",
+        "Custom component styling",
+        "Dark mode support",
+        "Utility-first rapid styling",
       ],
     },
     git: {
       title: "Git",
-      description: "Version control system for code collaboration.",
+      description:
+        "Managed version control, collaborated on features, and maintained clean commit histories for personal and collaborative projects.",
       icon: <FaGitAlt className="text-orange-500" size={48} />,
-      details: ["Branching", "Merging", "Rebasing", "Pull requests"],
+      details: [
+        "Branching for features",
+        "Merging & resolving conflicts",
+        "Version history tracking",
+        "Pull requests & reviews",
+      ],
     },
     vscode: {
       title: "VS Code",
-      description: "Lightweight code editor with extensions.",
+      description:
+        "Primary editor for coding MERN projects, leveraging extensions for productivity and debugging.",
       icon: <VscVscode className="text-blue-400" size={48} />,
       details: [
-        "Extensions",
-        "Terminal integration",
-        "IntelliSense",
-        "Git support",
+        "Integrated terminal",
+        "Extensions for linting & debugging",
+        "Git integration",
+        "Code snippets & IntelliSense",
       ],
     },
     postman: {
       title: "Postman",
-      description: "API platform for building and testing APIs.",
+      description:
+        "Tested and documented APIs for MERN applications to ensure correctness and ease of integration.",
       icon: <SiPostman className="text-orange-400" size={48} />,
       details: [
-        "API testing",
-        "Collections",
-        "Automation",
-        "Environment variables",
+        "API request testing",
+        "Environment setups",
+        "Collections for endpoints",
+        "Automated test scripts",
       ],
     },
-    chrome: {
-      title: "Chrome DevTools",
-      description: "Debugging tools built into Chrome.",
-      icon: <FaChrome className="text-blue-400" size={48} />,
+    sql: {
+      title: "SQL",
+      description:
+        "Handled relational data for projects that required structured reporting or analytics alongside NoSQL databases.",
+      icon: <BsFiletypeSql className="text-blue-500" size={48} />,
       details: [
-        "Inspect Element",
-        "Network analysis",
-        "Performance profiling",
-        "Console debugging",
-      ],
-    },
-    jira: {
-      title: "Jira",
-      description: "Agile project management tool.",
-      icon: <FaJira className="text-blue-500" size={48} />,
-      details: ["Scrum boards", "Sprint planning", "Issue tracking", "Reports"],
-    },
-    figma: {
-      title: "Figma",
-      description: "Collaborative UI/UX design tool.",
-      icon: <FaFigma className="text-purple-400" size={48} />,
-      details: [
-        "Wireframing",
-        "Prototyping",
-        "Design systems",
-        "Collaboration",
+        "User & order reports",
+        "Join queries for analytics",
+        "Data validation & constraints",
+        "Temporary tables & views",
       ],
     },
   };
+
+  const featuredProjects = [
+    {
+      title: "Xirion-Africa (E-Commerce Platform)",
+      desc: "Full-stack MERN store with user authentication, product catalog, and M-Pesa payments.",
+    },
+    {
+      title: "Tiketa - Online Ticket Selling Platform",
+      desc: "MERN powered, integrated with real-time availability updates and mobile payments.",
+    },
+  ];
 
   return (
     <section id="skills" className="px-4 py-16 text-white">
       <div className="max-w-6xl mx-auto">
         <header className="text-center">
-          <h1 className="mb-8 text-4xl font-bold text-transparent md:text-5xl bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
+          <h1 className="mb-8 text-4xl font-bold text-transparent md:text-5xl bg-clip-text bg-gradient-to-r from-nyuki-honey to-nyuki-gold">
             Skills & Tools
           </h1>
         </header>
 
-        {/* Skill Tabs */}
         <div className="flex flex-wrap justify-center gap-3 mb-10">
           {Object.keys(skills).map((key) => (
             <button
               key={key}
               onClick={() => setActiveSkill(key)}
-              className={`px-4 py-2 rounded-md text-sm transition-all ${
+              className={`px-4 py-2 rounded-md text-sm font-medium transition-all ${
                 activeSkill === key
-                  ? "bg-gradient-to-r from-blue-600 to-purple-600"
-                  : "bg-gray-800 hover:bg-gray-700 text-gray-300"
+                  ? "bg-gradient-to-r from-nyuki-honey to-nyuki-gold text-nyuki-black"
+                  : "bg-nyuki-black/60 border border-nyuki-stripe/30 hover:bg-nyuki-stripe/20 text-gray-300"
               }`}
             >
               {skills[key].title}
@@ -165,24 +155,23 @@ export default function MySkills() {
           ))}
         </div>
 
-        <div className="p-8 transition border border-gray-800 shadow-md bg-gray-900/70 backdrop-blur rounded-xl hover:border-gray-600">
+        <div className="p-8 transition border border-nyuki-stripe/30 shadow-md bg-nyuki-black/70 backdrop-blur rounded-xl hover:border-nyuki-honey">
           <div className="flex flex-col gap-8 md:flex-row">
             <div className="flex-shrink-0">{skills[activeSkill].icon}</div>
             <div>
-              <h2 className="text-2xl font-bold">
+              <h2 className="text-2xl font-bold text-nyuki-wax">
                 {skills[activeSkill].title}
               </h2>
               <p className="mt-2 text-gray-400">
                 {skills[activeSkill].description}
               </p>
-
-              <h3 className="mt-6 mb-3 font-semibold text-blue-400">
-                Key Capabilities
+              <h3 className="mt-6 mb-3 font-semibold text-nyuki-gold">
+                Key Achievements
               </h3>
               <ul className="grid grid-cols-1 gap-2 sm:grid-cols-2">
                 {skills[activeSkill].details.map((detail, idx) => (
                   <li key={idx} className="flex items-center">
-                    <span className="w-2 h-2 mr-2 bg-purple-500 rounded-full" />
+                    <span className="w-2 h-2 mr-2 bg-nyuki-honey rounded-full" />
                     <span>{detail}</span>
                   </li>
                 ))}
@@ -191,35 +180,24 @@ export default function MySkills() {
           </div>
 
           <div className="mt-10">
-            <h3 className="mb-6 font-semibold text-blue-400">
+            <h3 className="mb-6 font-semibold text-nyuki-gold">
               Featured Projects
             </h3>
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-              {[
-                {
-                  title: "Xirion-Africa (E-Commerce Platform)",
-                  desc: "Full-stack MERN store with authentication and payments.",
-                  color: "blue-400",
-                },
-                {
-                  title: "Tiketa - Online Ticket Selling Platform",
-                  desc: "MERN powered. M-pesa integrated",
-                  color: "purple-400",
-                },
-              ].map((project, idx) => (
+              {featuredProjects.map((project, idx) => (
                 <div
                   key={idx}
-                  className="p-6 transition bg-gray-800 border border-gray-700 rounded-lg hover:border-blue-600 group"
+                  className="p-6 transition bg-nyuki-black/60 border border-nyuki-stripe/30 rounded-lg hover:border-nyuki-honey group"
                 >
-                  <h4 className="mb-2 text-lg font-semibold">
+                  <h4 className="mb-2 text-lg font-semibold text-nyuki-wax">
                     {project.title}
                   </h4>
                   <p className="mb-3 text-sm text-gray-400">{project.desc}</p>
                   <div className="flex items-center justify-between">
-                    <span className="text-sm">View Project</span>
-                    <FaExternalLinkAlt
-                      className={`h-4 w-4 text-${project.color} group-hover:translate-x-1 transition`}
-                    />
+                    <span className="text-sm text-nyuki-stripe">
+                      View Project
+                    </span>
+                    <FaExternalLinkAlt className="h-4 w-4 text-nyuki-gold group-hover:translate-x-1 transition" />
                   </div>
                 </div>
               ))}

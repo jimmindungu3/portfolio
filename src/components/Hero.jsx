@@ -6,6 +6,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const Hero = () => {
+  // Initialize AOS animations
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -14,127 +15,154 @@ const Hero = () => {
     });
   }, []);
 
+  // Services you offer
+  const services = [
+    "Custom Web Applications",
+    "Responsive Frontend Design",
+    "Backend & API Development",
+    "E-commerce Platforms with Payment Integration",
+    "Full-stack Deployment & Maintenance",
+  ];
+
   return (
     <section
       id="home"
-      className="flex items-center justify-center w-full min-h-screen px-4 py-16 md:py-24 lg:py-32"
+      className="relative flex items-center justify-center w-full min-h-screen px-4 py-16 overflow-hidden md:py-24 lg:py-32"
     >
-      <div className="container flex flex-col items-center justify-between max-w-6xl gap-8 px-4 mx-auto lg:flex-row">
-        <div
-          className="flex flex-col items-center max-w-2xl text-center lg:items-start lg:text-left"
-          data-aos="fade-up"
-        >
-          <p className="mb-4 text-2xl">👋 🌍</p>
+      <div className="container relative z-10 mx-auto max-w-7xl">
+        {/* Main grid */}
+        <div className="grid items-center grid-cols-1 gap-12 lg:grid-cols-2">
+          {/* Left side - Text */}
+          <div className="order-2 lg:order-1" data-aos="fade-right">
+            <div className="space-y-6">
+              {/* Greeting */}
+              <p className="text-lg font-medium tracking-wide text-nyuki-stripe">
+                Hello There!
+              </p>
 
-          <h1
-            className="mb-4 text-3xl font-bold leading-tight text-white md:text-5xl"
+              {/* Name */}
+              <div className="relative">
+                <h1 className="text-4xl font-bold leading-tight text-transparent md:text-4xl lg:text-5xl bg-clip-text bg-gradient-to-r from-nyuki-honey via-nyuki-gold to-nyuki-stripe">
+                  I'm James Ndung'u
+                </h1>
+                <div className="w-32 h-1 mt-4 rounded-full bg-gradient-to-r from-nyuki-gold to-transparent"></div>
+              </div>
+
+              {/* Titles */}
+              <div className="space-y-2">
+                <h2 className="text-2xl font-bold md:text-3xl lg:text-4xl text-nyuki-wax">
+                  Full Stack Web Developer
+                </h2>
+                <h2 className="text-2xl font-bold md:text-3xl lg:text-4xl text-nyuki-wax">
+                  & TVET Trainer
+                </h2>
+              </div>
+
+              {/* Description */}
+              <p className="max-w-xl text-lg leading-relaxed text-gray-300">
+                I build web applications that help businesses operate
+                efficiently and users engage seamlessly. From intuitive,
+                responsive interfaces to reliable backends and APIs, I deliver
+                solutions that solve real-world problems.
+              </p>
+
+              {/* Services badges */}
+              <div className="flex flex-wrap gap-3 pt-4">
+                {services.map((service, index) => (
+                  <span
+                    key={index}
+                    className="px-4 py-2 text-sm font-medium transition-colors duration-300 border rounded-lg text-nyuki-black bg-nyuki-wax border-nyuki-honey/30 hover:bg-nyuki-stripe"
+                    data-aos="fade-up"
+                    data-aos-delay={index * 100}
+                  >
+                    {service}
+                  </span>
+                ))}
+              </div>
+
+              {/* Action buttons */}
+              <div className="flex flex-wrap gap-4 pt-6">
+                <a
+                  href="#contact"
+                  className="flex items-center gap-2 px-8 py-4 font-bold transition-all duration-300 rounded-lg group text-nyuki-black bg-gradient-to-r from-nyuki-honey to-nyuki-gold hover:from-nyuki-gold hover:to-nyuki-honey hover:shadow-lg hover:shadow-nyuki-honey/50 hover:scale-105"
+                  data-aos="fade-up"
+                >
+                  <MdContactPhone className="transition-transform duration-300 group-hover:rotate-12" />
+                  <span>Get In Touch</span>
+                </a>
+
+                <a
+                  href="/James Resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-8 py-4 font-bold transition-all duration-300 border-2 rounded-lg group text-nyuki-wax border-nyuki-stripe hover:bg-nyuki-stripe/20 hover:border-nyuki-honey hover:scale-105"
+                  data-aos="fade-up"
+                  data-aos-delay="100"
+                >
+                  <FaFileAlt className="group-hover:translate-y-[-2px] transition-transform duration-300" />
+                  <span>Resume</span>
+                </a>
+              </div>
+
+              {/* Social links */}
+              <div
+                className="flex gap-4 pt-6"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <a
+                  href="https://github.com/jimmindungu3"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 transition-all duration-300 border-2 rounded-full border-nyuki-stripe/30 text-nyuki-honey hover:bg-nyuki-honey hover:text-nyuki-black hover:border-nyuki-honey hover:scale-110"
+                >
+                  <FaGithub size={24} />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/jamesndunguthedev"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 transition-all duration-300 border-2 rounded-full border-nyuki-stripe/30 text-nyuki-honey hover:bg-nyuki-honey hover:text-nyuki-black hover:border-nyuki-honey hover:scale-110"
+                >
+                  <FaLinkedin size={24} />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Right side - Image */}
+          <div
+            className="flex justify-center order-1 lg:order-2"
             data-aos="fade-left"
           >
-            I'm James Ndung'u
-          </h1>
+            <div className="relative">
+              {/* Decorative glow */}
+              <div
+                className="absolute rounded-full -inset-8 bg-gradient-to-r from-nyuki-honey/20 to-nyuki-gold/20 blur-3xl"
+                style={{
+                  animation: "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+                }}
+              ></div>
 
-          <div
-            className="flex justify-center w-3/4 mt-4 mb-4 lg:hidden"
-            data-aos="fade-up"
-          >
-            <img
-              src="/james.png"
-              alt="James photo"
-              className="w-3/4 max-w-xs border border-gray-700 rounded-full"
-            />
+              {/* Profile image */}
+              <div className="flex justify-center md:justify-start relative">
+                {/* Decorative glow */}
+                <div
+                  className="absolute rounded-full -inset-8 bg-gradient-to-r from-nyuki-honey/20 to-nyuki-gold/20 blur-2xl"
+                  style={{
+                    animation: "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+                  }}
+                ></div>
+
+                {/* Profile image */}
+                <img
+                  src="/james.png"
+                  alt="James Ndung'u's profile image"
+                  className="w-3/4 md:w-full max-w-md border-2 rounded-full shadow-2xl border-nyuki-stripe shadow-nyuki-honey/20 relative"
+                />
+              </div>
+            </div>
           </div>
-
-          <div className="mb-4">
-            <h2
-              className="mb-2 text-2xl font-bold text-transparent md:text-4xl bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600"
-              data-aos="fade-left"
-            >
-              Full Stack Web Developer &
-            </h2>
-            <h2
-              className="text-2xl font-bold text-transparent md:text-4xl bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600"
-              data-aos="fade-left"
-            >
-              TVET Trainer
-            </h2>
-          </div>
-
-          <p className="mb-6 text-gray-300" data-aos="fade-left">
-            I design and develop scalable web applications using modern
-            JavaScript and Python frameworks. From responsive UIs to robust
-            backends and APIs, I create solutions that help businesses grow and
-            individuals learn.
-          </p>
-
-          <div className="flex flex-wrap justify-center gap-3 mb-6 lg:justify-start">
-            {["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"].map(
-              (tech, index) => (
-                <span
-                  key={index}
-                  className="px-4 py-1 text-sm text-gray-300 bg-gray-800 rounded-full"
-                  data-aos="zoom-in"
-                >
-                  {tech}
-                </span>
-              )
-            )}
-          </div>
-
-          <div className="flex flex-wrap justify-center gap-4 mb-6 lg:justify-start">
-            <a
-              href="#contact"
-              className="flex items-center gap-2 px-6 py-3 text-white transition rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600"
-              data-aos="fade-up"
-            >
-              <span>
-                <MdContactPhone />
-              </span>
-              <span>Contact</span>
-            </a>
-
-            <a
-              href="/James Resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 px-6 py-3 text-white transition bg-indigo-600 rounded-lg hover:bg-indigo-700"
-              data-aos="fade-up"
-            >
-              <FaFileAlt />
-              <span>View Resume</span>
-            </a>
-          </div>
-
-          <div className="flex justify-center gap-6 text-white lg:justify-start">
-            <a
-              href="https://github.com/jimmindungu3"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="transition hover:text-purple-400"
-              data-aos="fade-right"
-            >
-              <FaGithub size={24} />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/jamesndunguthedev"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="transition hover:text-purple-400"
-              data-aos="fade-right"
-            >
-              <FaLinkedin size={24} />
-            </a>
-          </div>
-        </div>
-
-        <div
-          className="justify-center hidden w-full lg:flex lg:w-1/2"
-          data-aos="fade-left"
-        >
-          <img
-            src="/james.png"
-            alt="Developer Illustration"
-            className="w-3/4 max-w-md border border-gray-700 rounded-full"
-          />
         </div>
       </div>
     </section>

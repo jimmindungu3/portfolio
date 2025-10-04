@@ -1,17 +1,16 @@
 import React, { useEffect } from "react";
 import {
   FaCode,
-  FaCertificate,
   FaGraduationCap,
   FaArrowRight,
   FaFileAlt,
 } from "react-icons/fa";
-import { BiSolidTimeFive } from "react-icons/bi";
 import { MdOutlineWorkHistory } from "react-icons/md";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 const About = () => {
+  // Initialize animations when component loads
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -20,16 +19,49 @@ const About = () => {
     });
   }, []);
 
+  // Career highlights data
+  const highlights = [
+    {
+      icon: FaCode,
+      number: "4+",
+      title: "Key Projects",
+      description: "From e-commerce to educational platforms",
+      iconColor: "text-nyuki-gold",
+      hoverColor: "hover:border-nyuki-honey/50",
+      arrowHover: "group-hover:text-nyuki-gold",
+    },
+    {
+      icon: FaGraduationCap,
+      number: "3+",
+      title: "Certificates",
+      description: "Software engineering & TVET training",
+      iconColor: "text-nyuki-honey",
+      hoverColor: "hover:border-nyuki-gold/50",
+      arrowHover: "group-hover:text-nyuki-honey",
+    },
+    {
+      icon: MdOutlineWorkHistory,
+      number: "3+",
+      title: "Years of experience",
+      description: "Balancing development & teaching",
+      iconColor: "text-nyuki-stripe",
+      hoverColor: "hover:border-nyuki-stripe/50",
+      arrowHover: "group-hover:text-nyuki-stripe",
+    },
+  ];
+
   return (
     <section id="about" className="w-full px-4 py-16 text-white">
       <div className="max-w-5xl mx-auto">
+        {/* Section Title */}
         <h2
-          className="mb-8 text-4xl font-bold text-center text-transparent md:text-5xl bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600"
+          className="mb-8 text-4xl font-bold text-center text-transparent md:text-5xl bg-clip-text bg-gradient-to-r from-nyuki-honey to-nyuki-gold"
           data-aos="fade-up"
         >
           About Me
         </h2>
 
+        {/* Introduction */}
         <div
           className="mb-10 text-center"
           data-aos="fade-up"
@@ -50,6 +82,7 @@ const About = () => {
           </p>
         </div>
 
+        {/* My Approach Section */}
         <div className="mb-12">
           <h3
             className="mb-6 text-2xl font-bold text-center"
@@ -63,8 +96,9 @@ const About = () => {
             data-aos="fade-up"
             data-aos-delay="300"
           >
-            <div className="p-6 border border-gray-800 rounded-lg bg-gray-900/60 backdrop-blur">
-              <h4 className="mb-3 text-xl font-semibold text-purple-400">
+            {/* Development Philosophy */}
+            <div className="p-6 border border-nyuki-stripe/30 rounded-lg bg-nyuki-black/60 backdrop-blur">
+              <h4 className="mb-3 text-xl font-semibold text-nyuki-gold">
                 Development Philosophy
               </h4>
               <p className="text-gray-300">
@@ -75,8 +109,9 @@ const About = () => {
               </p>
             </div>
 
-            <div className="p-6 border border-gray-800 rounded-lg bg-gray-900/60 backdrop-blur">
-              <h4 className="mb-3 text-xl font-semibold text-blue-400">
+            {/* Teaching Approach */}
+            <div className="p-6 border border-nyuki-stripe/30 rounded-lg bg-nyuki-black/60 backdrop-blur">
+              <h4 className="mb-3 text-xl font-semibold text-nyuki-honey">
                 Teaching Approach
               </h4>
               <p className="text-gray-300">
@@ -89,6 +124,7 @@ const About = () => {
           </div>
         </div>
 
+        {/* Career Highlights Section */}
         <h3 className="mb-6 text-2xl font-bold text-center" data-aos="fade-up">
           Career Highlights
         </h3>
@@ -98,90 +134,57 @@ const About = () => {
           data-aos="fade-up"
           data-aos-delay="600"
         >
-          <div
-            className="p-6 transition border border-gray-800 rounded-lg bg-gray-900/80 backdrop-blur hover:border-indigo-900/50 group"
-            data-aos="fade-up"
-          >
-            <div className="flex items-start justify-between mb-6">
-              <div className="p-3 bg-gray-800 rounded-full">
-                <FaCode className="text-xl text-indigo-400" />
+          {highlights.map((highlight, index) => {
+            const Icon = highlight.icon;
+            return (
+              <div
+                key={index}
+                className={`p-6 transition border border-nyuki-stripe/20 rounded-lg bg-nyuki-black/80 backdrop-blur ${highlight.hoverColor} group`}
+                data-aos="fade-up"
+              >
+                <div className="flex items-start justify-between mb-6">
+                  <div className="p-3 bg-gray-800 rounded-full">
+                    <Icon className={`text-xl ${highlight.iconColor}`} />
+                  </div>
+                  <span className="text-4xl font-bold text-nyuki-wax">
+                    {highlight.number}
+                  </span>
+                </div>
+                <h3 className="mb-1 text-lg font-semibold tracking-wider text-gray-300 uppercase">
+                  {highlight.title}
+                </h3>
+                <div className="flex items-center justify-between">
+                  <p className="text-sm text-gray-400">
+                    {highlight.description}
+                  </p>
+                  <FaArrowRight
+                    className={`text-gray-600 transition ${highlight.arrowHover}`}
+                  />
+                </div>
               </div>
-              <span className="text-4xl font-bold text-white">4+</span>
-            </div>
-            <h3 className="mb-1 text-lg font-semibold tracking-wider text-gray-300 uppercase">
-              Key Projects
-            </h3>
-            <div className="flex items-center justify-between">
-              <p className="text-sm text-gray-400">
-                From e-commerce to educational platforms
-              </p>
-              <FaArrowRight className="text-gray-600 transition group-hover:text-indigo-400" />
-            </div>
-          </div>
-
-          <div
-            className="p-6 transition border border-gray-800 rounded-lg bg-gray-900/80 backdrop-blur hover:border-indigo-900/50 group"
-            data-aos="fade-up"
-          >
-            <div className="flex items-start justify-between mb-6">
-              <div className="p-3 bg-gray-800 rounded-full">
-                <FaGraduationCap className="text-xl text-purple-400" />
-              </div>
-              <span className="text-4xl font-bold text-white">3+</span>
-            </div>
-            <h3 className="mb-1 text-lg font-semibold tracking-wider text-gray-300 uppercase">
-              Certificates
-            </h3>
-            <div className="flex items-center justify-between">
-              <p className="text-sm text-gray-400">
-                Software engineering & TVET training
-              </p>
-              <FaArrowRight className="text-gray-600 transition group-hover:text-purple-400" />
-            </div>
-          </div>
-
-          <div
-            className="p-6 transition border border-gray-800 rounded-lg bg-gray-900/80 backdrop-blur hover:border-indigo-900/50 group"
-            data-aos="fade-up"
-          >
-            <div className="flex items-start justify-between mb-6">
-              <div className="p-3 bg-gray-800 rounded-full">
-                <MdOutlineWorkHistory className="text-xl text-blue-400" />
-              </div>
-              <span className="text-4xl font-bold text-white">3+</span>
-            </div>
-            <h3 className="mb-1 text-lg font-semibold tracking-wider text-gray-300 uppercase">
-              Years of experience
-            </h3>
-            <div className="flex items-center justify-between">
-              <p className="text-sm text-gray-400">
-                Balancing development & teaching
-              </p>
-              <FaArrowRight className="text-gray-600 transition group-hover:text-blue-400" />
-            </div>
-          </div>
+            );
+          })}
         </div>
 
+        {/* Action Buttons */}
         <div
           className="flex flex-wrap justify-center gap-4 mt-12"
           data-aos="fade-up"
           data-aos-delay="400"
         >
-          <button className="flex items-center gap-2 px-6 py-3 transition rounded-lg bg-indigo-600/80 hover:bg-indigo-700">
-            <a
-              href="/James Resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2"
-            >
-              <FaFileAlt />
-              <span>View Resume</span>
-            </a>
-          </button>
+          <a
+            href="/James Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-6 py-3 font-semibold transition rounded-lg bg-gradient-to-r from-nyuki-honey to-nyuki-gold text-nyuki-black hover:from-nyuki-gold hover:to-nyuki-honey"
+          >
+            <FaFileAlt />
+            <span>View Resume</span>
+          </a>
 
           <a
             href="#projects"
-            className="flex items-center gap-2 px-6 py-3 transition border rounded-lg bg-purple-900/60 hover:bg-purple-900/80 border-purple-500/30"
+            className="flex items-center gap-2 px-6 py-3 font-semibold transition border rounded-lg bg-nyuki-stripe/20 hover:bg-nyuki-stripe/30 border-nyuki-stripe/50 text-nyuki-wax"
           >
             <FaCode />
             <span>View Projects</span>
