@@ -51,7 +51,7 @@ export default function Footer() {
 
         {/* Copyright Text */}
         <p className="text-gray-400 text-sm mb-4">
-          Built with 🍯 by 🐝 | James Ng'ang'a Ndung'u | © {new Date().getFullYear()}
+          James Ng'ang'a Ndung'u | © {new Date().getFullYear()}
         </p>
       </div>
     </footer>
